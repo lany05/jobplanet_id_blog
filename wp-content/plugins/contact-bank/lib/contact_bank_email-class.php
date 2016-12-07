@@ -1,4 +1,5 @@
 <?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 	switch($cb_role)
 	{
 		case "administrator":
@@ -10,7 +11,7 @@
 		case "author":
 			$cb_user_role_permission = "publish_posts";
 		break;
-		
+
 	}
 if (!current_user_can($cb_user_role_permission))
 {
@@ -20,10 +21,10 @@ else
 {
 	if(isset($_REQUEST["param"]))
 	{
-		switch($_REQUEST["param"])
+		switch(esc_attr($_REQUEST["param"]))
 		{
 			case "email_settings":
-				$form_id = intval($_REQUEST["form_id"]);
+				$form_id = isset($_REQUEST["form_id"]) ? intval($_REQUEST["form_id"]) : 0;
 				$email_settings = $wpdb->get_results
 				(
 					$wpdb->prepare
@@ -45,42 +46,42 @@ else
 								case "administrator":
 									?>
 									<a href="admin.php?page=add_contact_email_settings&email_id=<?php echo $email_settings[$flag]->email_id;?>&form_id=<?php echo $form_id ?>" class="btn hovertip" data-original-title="<?php _e("Edit Email Settings",contact_bank)?>">
-										<i class="icon-pencil"></i>
+										<i class="icon-custom-pencil"></i>
 									</a>
 									<a herf="#" onclick="delete_email_settings(<?php echo $email_settings[$flag]->email_id;?>)" class="btn hovertip" data-original-title="<?php _e("Delete Email Settings",contact_bank)?>">
-										<i class="icon-trash"></i>
+										<i class="icon-custom-trash"></i>
 									</a>
 								<?php
 								break;
 								case "editor":
 									?>
 									<a href="admin.php?page=add_contact_email_settings&email_id=<?php echo $email_settings[$flag]->email_id;?>&form_id=<?php echo $form_id ?>" class="btn hovertip" data-original-title="<?php _e("Edit Email Settings",contact_bank)?>">
-										<i class="icon-pencil"></i>
+										<i class="icon-custom-pencil"></i>
 									</a>
 									<a herf="#" onclick="delete_email_settings(<?php echo $email_settings[$flag]->email_id;?>)" class="btn hovertip" data-original-title="<?php _e("Delete Email Settings",contact_bank)?>">
-										<i class="icon-trash"></i>
+										<i class="icon-custom-trash"></i>
 									</a>
 								<?php
 								break;
 								case "author":
 									?>
 									<a href="admin.php?page=add_contact_email_settings&email_id=<?php echo $email_settings[$flag]->email_id;?>&form_id=<?php echo $form_id ?>" class="btn hovertip" data-original-title="<?php _e("Edit Email Settings",contact_bank)?>">
-										<i class="icon-pencil"></i>
+										<i class="icon-custom-pencil"></i>
 									</a>
 									<a herf="#" onclick="delete_email_settings(<?php echo $email_settings[$flag]->email_id;?>)" class="btn hovertip" data-original-title="<?php _e("Delete Email Settings",contact_bank)?>">
-										<i class="icon-trash"></i>
+										<i class="icon-custom-trash"></i>
 									</a>
 								<?php
 								break;
 								case "contributor":
 									break;
-								
+
 								case "subscriber":
 									break;
-								
+
 							}
 							?>
-							
+
 						</td>
 					</tr>
 					<?php
@@ -93,7 +94,7 @@ else
 						"bAutoWidth": true,
 						"sPaginationType": "full_numbers",
 						"sDom": "<\"datatable-header\"fl>t<\"datatable-footer\"ip>",
-						"oLanguage": 
+						"oLanguage":
 						{
 							"sLengthMenu": "<span>Show entries:</span> _MENU_"
 						},
@@ -101,29 +102,30 @@ else
 					});
 				</script>
 				<?php
-				die();
+
 			break;
 			case "insert_email_controls":
-				$form_id = isset($_REQUEST["form_id"]) ? intval($_REQUEST["form_id"]) : "";
-				$email_id = isset($_REQUEST["email_id"]) ? intval($_REQUEST["email_id"]) : "";
-				$email_id = intval($_REQUEST["email_id"]);
-				$email_name = esc_attr($_REQUEST["ux_txt_name"]);
-				$send_to = intval($_REQUEST["ux_rdl_send_to"]);
+				$form_id = isset($_REQUEST["form_id"]) ? intval($_REQUEST["form_id"]) : 0;
+				$email_id = isset($_REQUEST["email_id"]) ? intval($_REQUEST["email_id"]) : 0;
+				parse_str(isset($_REQUEST["data"]) ? base64_decode($_REQUEST["data"]) : "",$email_settings_data);
+				$uxDescription_email = esc_html($email_settings_data["uxEmailTemplate_hidden"]);
+				$email_name = esc_html($email_settings_data["ux_txt_name"]);
+				$send_to = intval($email_settings_data["ux_rdl_send_to"]);
 				if($send_to == 0)
 				{
-					$email_address = esc_attr($_REQUEST["ux_txt_email"]);
+					$email_address = esc_html($email_settings_data["ux_txt_email"]);
 				}
 				else
 				{
-					$email_address = esc_attr($_REQUEST["ux_txt_send_to_field"]);
+					$email_address = esc_html($email_settings_data["ux_txt_send_to_field"]);
 				}
-				$email_from_name = esc_attr($_REQUEST["ux_txt_from_name"]);
-				$email_from_email = esc_attr($_REQUEST["ux_txt_from_email"]);
-				$email_reply_to = esc_attr($_REQUEST["ux_txt_reply_to"]);
-				$email_cc = esc_attr($_REQUEST["ux_txt_cc"]);
-				$email_bcc  = esc_attr($_REQUEST["ux_txt_bcc"]);
-				$email_subject  = esc_attr($_REQUEST["ux_txt_subject"]);
-				$uxDescription_email = html_entity_decode($_REQUEST["uxEmailTemplate"]);
+				$email_from_name = esc_html($email_settings_data["ux_txt_from_name"]);
+				$email_from_email = esc_html($email_settings_data["ux_txt_from_email"]);
+				$email_reply_to = esc_html($email_settings_data["ux_txt_reply_to"]);
+				$email_cc = esc_html($email_settings_data["ux_txt_cc"]);
+				$email_bcc  = esc_html($email_settings_data["ux_txt_bcc"]);
+				$email_subject  = esc_html($email_settings_data["ux_txt_subject"]);
+
 				$wpdb->query
 				(
 					$wpdb->prepare
@@ -143,10 +145,10 @@ else
 						$email_id
 					)
 				);
-				die();
+
 			break;
 			case "delete_email_settings":
-				$email_id = intval($_REQUEST["email_id"]);
+				$email_id = isset($_REQUEST["email_id"]) ? intval($_REQUEST["email_id"]) : 0;
 				$wpdb->query
 				(
 					$wpdb->prepare
@@ -155,9 +157,10 @@ else
 						$email_id
 					)
 				);
-				die();
+
 			break;
 		}
+		die();
 	}
 }
 ?>

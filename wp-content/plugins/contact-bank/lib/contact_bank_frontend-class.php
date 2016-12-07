@@ -1,11 +1,14 @@
 <?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 global $wpdb;
 if(isset($_REQUEST["param"]))
 {
-	if($_REQUEST["param"] == "frontend_submit_controls")
+	if(esc_attr($_REQUEST["param"]) == "frontend_submit_controls")
 	{
-		$form_id = intval($_REQUEST["form_id"]);
-		$rand = intval($_REQUEST["rand"]);
+		$form_id = isset($_REQUEST["form_id"]) ? intval($_REQUEST["form_id"]) : 0;
+		$rand = isset($_REQUEST["rand"]) ? intval($_REQUEST["rand"]) : 0;
+		parse_str(isset($_REQUEST["data"]) ? base64_decode($_REQUEST["data"]) : "",$frontend_form_submit_data);
+
 		$fields = $wpdb->get_results
 		(
 			$wpdb->prepare
@@ -40,7 +43,7 @@ if(isset($_REQUEST["param"]))
 			switch($field_id)
 			{
 				case 1:
-					$ux_txt = esc_attr(stripslashes($_REQUEST["ux_txt_control_".$dynamicId."_".$rand]));
+					$ux_txt = esc_html($frontend_form_submit_data["ux_txt_control_".$dynamicId."_".$rand]);
 					$wpdb->query
 					(
 						$wpdb->prepare
@@ -55,7 +58,7 @@ if(isset($_REQUEST["param"]))
 					);
 				break;
 				case 2:
-					$ux_textarea = esc_attr(stripslashes($_REQUEST["ux_textarea_control_".$dynamicId."_".$rand]));
+					$ux_textarea = esc_html($frontend_form_submit_data["ux_textarea_control_".$dynamicId."_".$rand]);
 					$wpdb->query
 					(
 						$wpdb->prepare
@@ -70,7 +73,7 @@ if(isset($_REQUEST["param"]))
 					);
 				break;
 				case 3:
-					$ux_email = esc_attr(stripslashes($_REQUEST["ux_txt_email_".$dynamicId."_".$rand]));
+					$ux_email = esc_html($frontend_form_submit_data["ux_txt_email_".$dynamicId."_".$rand]);
 					$wpdb->query
 					(
 						$wpdb->prepare
@@ -85,14 +88,14 @@ if(isset($_REQUEST["param"]))
 					);
 				break;
 				case 4:
-					$ux_dropdown = "Untitled";
-					if(esc_attr($_REQUEST["ux_select_default_".$dynamicId."_".$rand]) == " ")
+
+					if(esc_attr($frontend_form_submit_data["ux_select_default_".$dynamicId."_".$rand]) == " ")
 					{
-						$ux_dropdown =  "Untitled";
+						$ux_dropdown =  "";
 					}
-					else 
+					else
 					{
-						$ux_dropdown = esc_attr($_REQUEST["ux_select_default_".$dynamicId."_".$rand]);
+						$ux_dropdown = esc_html($frontend_form_submit_data["ux_select_default_".$dynamicId."_".$rand]);
 					}
 					$wpdb->query
 					(
@@ -108,50 +111,20 @@ if(isset($_REQUEST["param"]))
 					);
 				break;
 				case 5:
-					if(isset($_REQUEST[$dynamicId."_".$rand."_chk"]))
+
+				if(isset($frontend_form_submit_data[$dynamicId."_".$rand."_chk"]))
+				{
+
+					$ux_checkbox = $frontend_form_submit_data[$dynamicId ."_".$rand."_chk"];
+					$checkbox_options = "";
+					for($flag1 =0;$flag1<count($ux_checkbox);$flag1++)
 					{
-						$ux_checkbox = esc_sql($_REQUEST[$dynamicId ."_".$rand."_chk"]);
-						$checkbox_options = "";
-						for($flag1 =0;$flag1<count($ux_checkbox);$flag1++)
+						$checkbox_options .= esc_html($ux_checkbox[$flag1]);
+						if($flag1 < count($ux_checkbox)-1)
 						{
-							$checkbox_options .= $ux_checkbox[$flag1];
-							if($flag1 < count($ux_checkbox)-1)
-							{
-							$checkbox_options .= "-";
-							}
+						$checkbox_options .= "-";
 						}
-						$wpdb->query
-						(
-							$wpdb->prepare
-							(
-								"INSERT INTO " . frontend_controls_data_Table(). " (form_id,field_id,dynamic_control_id,dynamic_frontend_value,form_submit_id) VALUES(%d,%d,%d,%s,%d)",
-								$form_id,
-								$field_id,
-								$control_dynamicId,
-								$checkbox_options,
-								$form_submit_id
-							)
-						);
 					}
-					else
-					{
-						$checkbox_options = "Untitled";
-						$wpdb->query
-						(
-							$wpdb->prepare
-							(
-								"INSERT INTO " . frontend_controls_data_Table(). " (form_id,field_id,dynamic_control_id,dynamic_frontend_value,form_submit_id) VALUES(%d,%d,%d,%s,%d)",
-								$form_id,
-								$field_id,
-								$control_dynamicId,
-								$checkbox_options,
-								$form_submit_id
-							)
-						);
-					}
-				break;
-				case 6:
-					$ux_multiple = isset($_REQUEST[$dynamicId ."_".$rand."_rdl"]) ? esc_attr($_REQUEST[$dynamicId ."_".$rand."_rdl"]) : "Untitled";
 					$wpdb->query
 					(
 						$wpdb->prepare
@@ -160,10 +133,43 @@ if(isset($_REQUEST["param"]))
 							$form_id,
 							$field_id,
 							$control_dynamicId,
-							$ux_multiple,
+							$checkbox_options,
 							$form_submit_id
 						)
 					);
+				}
+				else
+				{
+					$checkbox_options = "";
+					$wpdb->query
+					(
+						$wpdb->prepare
+						(
+							"INSERT INTO " . frontend_controls_data_Table(). " (form_id,field_id,dynamic_control_id,dynamic_frontend_value,form_submit_id) VALUES(%d,%d,%d,%s,%d)",
+							$form_id,
+							$field_id,
+							$control_dynamicId,
+							$checkbox_options,
+							$form_submit_id
+						)
+					);
+				}
+				break;
+				case 6:
+
+				$ux_multiple = isset($frontend_form_submit_data[$dynamicId ."_".$rand."_rdl"]) ? esc_html($frontend_form_submit_data[$dynamicId ."_".$rand."_rdl"]) : "Untitled";
+				$wpdb->query
+				(
+					$wpdb->prepare
+					(
+						"INSERT INTO " . frontend_controls_data_Table(). " (form_id,field_id,dynamic_control_id,dynamic_frontend_value,form_submit_id) VALUES(%d,%d,%d,%s,%d)",
+						$form_id,
+						$field_id,
+						$control_dynamicId,
+						$ux_multiple,
+						$form_submit_id
+					)
+				);
 				break;
 			}
 		}

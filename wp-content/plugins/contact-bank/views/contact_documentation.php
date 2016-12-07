@@ -1,5 +1,5 @@
 <?php
-
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -17,7 +17,7 @@ if (!current_user_can($cb_user_role_permission))
 	return;
 }
 else
-{ 
+{
 	?>
 	<div class="fluid-layout" >
 		<div class="layout-span12">
@@ -31,6 +31,6 @@ else
 			</div>
 		</div>
 	</div>
-	<?php 
+	<?php
 }
 ?>

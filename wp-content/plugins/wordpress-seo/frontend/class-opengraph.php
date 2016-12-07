@@ -756,14 +756,17 @@ class WPSEO_OpenGraph_Image {
 	 */
 	private function get_singular_image() {
 		global $post;
-
+		
+		/*
 		if ( $this->get_opengraph_image_post() ) {
 			return;
 		}
-
+		
+		
 		if ( $this->get_featured_image( $post->ID ) ) {
 			return;
 		}
+		*/
 
 		$this->get_content_images( $post );
 	}
@@ -817,7 +820,7 @@ class WPSEO_OpenGraph_Image {
 			 * @api string $unsigned Size string
 			 */
 			$thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), apply_filters( 'wpseo_opengraph_image_size', 'original' ) );
-
+			
 			if ( $this->check_featured_image_size( $thumb ) ) {
 				return $this->add_image( $thumb[0] );
 			}
@@ -837,8 +840,8 @@ class WPSEO_OpenGraph_Image {
 		$content = apply_filters( 'wpseo_pre_analysis_post_content', $post->post_content, $post );
 
 		if ( preg_match_all( '`<img [^>]+>`', $content, $matches ) ) {
-			foreach ( $matches[0] as $img ) {
-				if ( preg_match( '`src=(["\'])(.*?)\1`', $img, $match ) ) {
+			foreach ( $matches[0] as $key => $img) {
+				if ( preg_match( '`src=(["\'])(.*?)\1`', $img, $match ) && $key == 0 ) {
 					$this->add_image( $match[2] );
 				}
 			}

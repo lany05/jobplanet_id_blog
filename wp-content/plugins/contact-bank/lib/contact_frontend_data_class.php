@@ -1,18 +1,18 @@
 <?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
+switch($cb_role)
+{
+	case "administrator":
+		$cb_user_role_permission = "manage_options";
+	break;
+	case "editor":
+		$cb_user_role_permission = "publish_pages";
+	break;
+	case "author":
+		$cb_user_role_permission = "publish_posts";
+	break;
 
-	switch($cb_role)
-	{
-		case "administrator":
-			$cb_user_role_permission = "manage_options";
-		break;
-		case "editor":
-			$cb_user_role_permission = "publish_pages";
-		break;
-		case "author":
-			$cb_user_role_permission = "publish_posts";
-		break;
-		
-	}
+}
 if(!current_user_can($cb_user_role_permission))
 {
 	return;
@@ -21,9 +21,9 @@ else
 {
 	if(isset($_REQUEST["param"]))
 	{
-		if($_REQUEST["param"] == "frontend_form_data")
+		if(esc_attr($_REQUEST["param"]) == "frontend_form_data")
 		{
-			$form_id = intval($_REQUEST["form_id"]);
+			$form_id = isset($_REQUEST["form_id"]) ? intval($_REQUEST["form_id"]) : 0;
 			$form_data = $wpdb->get_results
 			(
 				$wpdb->prepare
@@ -100,8 +100,8 @@ else
 											<?php
 										}
 									}
-									
-									else 
+
+									else
 									{
 										?>
 										<td ><?php echo $form_control_labels_values; ?></td>
@@ -111,7 +111,7 @@ else
 							?>
 							<td style="vertical-align: middle;">
 								<a herf="#" onclick="delete_form_entry()" class="btn hovertip" data-original-title="<?php _e("Delete Form Entry",contact_bank)?>">
-									<i class="icon-trash"></i>
+									<i class="icon-custom-trash"></i>
 								</a>
 							</td>
 							</tr>
@@ -134,8 +134,8 @@ else
 					},
 					"aaSorting": [[ 0, "asc" ]]
 				});
-				
-			</script> 
+
+			</script>
 			<?php
 			die();
 		}

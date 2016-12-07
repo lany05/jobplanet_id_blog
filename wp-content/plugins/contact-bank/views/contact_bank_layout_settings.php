@@ -1,5 +1,5 @@
-<?php 
-
+<?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -18,7 +18,7 @@ if (!current_user_can($cb_user_role_permission))
 }
 else
 {
-?> 
+?>
 <form id="ux_frm_form_settings" class="layout-form">
 	<div id="poststuff" style="width: 99% !important;">
 		<div id="post-body" class="metabox-holder">
@@ -26,7 +26,7 @@ else
 				<div id="advanced" class="meta-box-sortables">
 					<div id="contact_bank_get_started" class="postbox" >
 						<div class="handlediv" data-target="#ux_form_email_div" title="Click to toggle" data-toggle="collapse"><br></div>
-						<h3 class="hndle"><span><?php _e( "Global Settings", contact_bank ); ?></span><i class="widget_premium_feature_contact"><?php _e(" (Premium Features available in Paid Edition)", contact_bank); ?></i></h4>   </h3>
+						<h3 class="hndle"><span><?php _e( "Global Settings", contact_bank ); ?></span></h4>   </h3>
 						<div class="inside">
 							<div id="ux_form_email_div" class="contact_bank_layout">
 								<a class="btn btn-info" href="admin.php?page=contact_dashboard"><?php _e("Back to Dashboard", contact_bank);?></a>
@@ -56,7 +56,7 @@ else
 													<?php
 														for($flag=0;$flag<count($forms);$flag++)
 														{
-															if(isset($_REQUEST["form_id"]) && $_REQUEST["form_id"] == $forms[$flag]->form_id)
+															if(isset($_REQUEST["form_id"]) && intval($_REQUEST["form_id"]) == $forms[$flag]->form_id)
 															{
 																?>
 														 		<option value="<?php echo $forms[$flag]->form_id ;?>" selected="selected"><?php echo $forms[$flag]->form_name ;?></option>
@@ -80,11 +80,11 @@ else
 										<div class="widget-layout">
 											<div class="widget-layout-title">
 												<h4><?php _e( "Label Settings", contact_bank ); ?>
-													<i class="widget_premium_feature_contact"><?php _e(" (Available in Premium Edition)", contact_bank); ?></i>
+													<i class="widget_premium_feature_contact"><?php _e(" (Available in Premium Editions)", contact_bank); ?></i>
 												</h4>
 												<span class="tools">
 													<a data-target="#label_settings" data-toggle="collapse">
-														<i class="icon-chevron-down"></i>
+														<i class="icon-custom-arrow-down"></i>
 													</a>
 												</span>
 											</div>
@@ -127,7 +127,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Font Style :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Font Style :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -141,7 +141,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group">
-														<label class="layout-control-label"><?php _e("Font Size (px) :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Font Size (px) :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -185,7 +185,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Label Position :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Label Position :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls" >
@@ -199,7 +199,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Field Desc Font Size :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Field Desc Font Size :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -230,7 +230,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Field Description Align :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Field Description Align :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -252,7 +252,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Text Direction :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Text Direction :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -268,17 +268,17 @@ else
 										</div>
 										<div class="widget-layout">
 											<div class="widget-layout-title">
-												<h4><?php _e( "Input Field Settings", contact_bank ); ?><i class="widget_premium_feature_contact"><?php _e(" (Available in Premium Edition)", contact_bank); ?></i></h4>
+												<h4><?php _e( "Input Field Settings", contact_bank ); ?><i class="widget_premium_feature_contact"><?php _e(" (Available in Premium Editions)", contact_bank); ?></i></h4>
 												<span class="tools">
 													<a data-target="#input_settings" data-toggle="collapse">
-														<i class="icon-chevron-down"></i>
+														<i class="icon-custom-arrow-down"></i>
 													</a>
 												</span>
 											</div>
 											<div id="input_settings" class="collapse in">
 												<div class="widget-layout-body">
 													<div class="layout-control-group " >
-														<label class="layout-control-label"><?php _e("Font Family :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Font Family :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -303,7 +303,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group ">
-														<label class="layout-control-label"><?php _e("Text Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Text Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -328,7 +328,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group">
-														<label class="layout-control-label"><?php _e("Font Size (px) :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Font Size (px) :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -369,7 +369,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group ">
-														<label class="layout-control-label"><?php _e("Border Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Border Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -390,7 +390,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group">
-														<label class="layout-control-label"><?php _e("Border Style :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Border Style :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -402,10 +402,10 @@ else
 														</div>
 													</div>
 												</div>
-												
+
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Background Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Background Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -442,7 +442,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Text Direction :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Text Direction :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -456,7 +456,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group">
-														<label class="layout-control-label"><?php _e("Input Size :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Input Size :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -473,15 +473,15 @@ else
 												</div>
 											</div>
 										</div>
-										
+
 									</div>
 									<div class="layout-span6">
 										<div class="widget-layout">
 											<div class="widget-layout-title">
-											 	<h4><?php _e( "Submit Button Settings", contact_bank ); ?><i class="widget_premium_feature_contact"><?php _e(" (Available in Premium Edition)", contact_bank); ?></i></h4>
+											 	<h4><?php _e( "Submit Button Settings", contact_bank ); ?><i class="widget_premium_feature_contact"><?php _e(" (Available in Premium Editions)", contact_bank); ?></i></h4>
 											 	<span class="tools">
 													<a data-target="#submit_settings" data-toggle="collapse">
-														<i class="icon-chevron-down"></i>
+														<i class="icon-custom-arrow-down"></i>
 													</a>
 												</span>
 											</div>
@@ -523,7 +523,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Style :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Style :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -537,7 +537,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group">
-														<label class="layout-control-label"><?php _e("Font Size (px) :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Font Size (px) :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -578,7 +578,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group ">
-														<label class="layout-control-label"><?php _e("Background Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Background Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -589,7 +589,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group ">
-														<label class="layout-control-label"><?php _e("Hover Background Color:", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Hover Background Color:", contact_bank);?>
 															<span  class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -600,7 +600,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Text Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Text Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -611,7 +611,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group ">
-														<label class="layout-control-label"><?php _e("Border Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Border Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -622,7 +622,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group " >
-														<label class="layout-control-label"><?php _e("Border Size (px) :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Border Size (px) :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -632,7 +632,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group ">
-														<label class="layout-control-label"><?php _e("Border Radius (px) :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Border Radius (px) :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -655,7 +655,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Text Direction :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Text Direction :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -671,17 +671,17 @@ else
 										</div>
 										<div class="widget-layout">
 											<div class="widget-layout-title">
-												<h4><?php _e( "Success Message Settings", contact_bank ); ?><i class="widget_premium_feature_contact"><?php _e(" (Available in Premium Edition)", contact_bank); ?></i></h4>
+												<h4><?php _e( "Success Message Settings", contact_bank ); ?><i class="widget_premium_feature_contact"><?php _e(" (Available in Premium Editions)", contact_bank); ?></i></h4>
 												<span class="tools">
 													<a data-target="#success_settings" data-toggle="collapse">
-														<i class="icon-chevron-down"></i>
+														<i class="icon-custom-arrow-down"></i>
 													</a>
 												</span>
 										 	</div>
 										 	<div id="success_settings" class="collapse in">
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Font Family :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Font Family :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -737,7 +737,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group">
-														<label class="layout-control-label"><?php _e("Background Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Background Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														 <div class="layout-controls">
@@ -748,7 +748,7 @@ else
 												</div>
 											 	<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Border Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Border Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -759,7 +759,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group">
-														<label class="layout-control-label"><?php _e("Text Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Text Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -783,7 +783,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Text Direction :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Text Direction :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -799,10 +799,10 @@ else
 										</div>
 										<div class="widget-layout">
 											<div class="widget-layout-title">
-												<h4><?php _e( "Error Message Settings", contact_bank ); ?><i class="widget_premium_feature_contact"><?php _e(" (Available in Premium Edition)", contact_bank); ?></i></h4>
+												<h4><?php _e( "Error Message Settings", contact_bank ); ?><i class="widget_premium_feature_contact"><?php _e(" (Available in Premium Editions)", contact_bank); ?></i></h4>
 												<span class="tools">
 													<a data-target="#error_settings" data-toggle="collapse">
-														<i class="icon-chevron-down"></i>
+														<i class="icon-custom-arrow-down"></i>
 													</a>
 												</span>
 											</div>
@@ -834,7 +834,7 @@ else
 													</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group " >
-														<label class="layout-control-label"><?php _e("Font Size (px) :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Font Size (px) :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -865,7 +865,7 @@ else
 												</div>
 											 	<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Background Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Background Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -876,7 +876,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Border Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Border Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -887,7 +887,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group ">
-														<label class="layout-control-label"><?php _e("Text Color :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Text Color :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -911,7 +911,7 @@ else
 												</div>
 												<div class="widget-layout-body">
 													<div class="layout-control-group" >
-														<label class="layout-control-label"><?php _e("Text Direction :", contact_bank);?> 
+														<label class="layout-control-label"><?php _e("Text Direction :", contact_bank);?>
 															<span class="error">*</span>
 														</label>
 														<div class="layout-controls">
@@ -938,82 +938,126 @@ else
 			</div>
 		</div>
 	</div>
-</form> 	
+</form>
 <script type="text/javascript">
-
-function ux_button_pro_version()
+if (typeof(ux_button_pro_version) != "function")
 {
-	alert("<?php _e( "This Feature is only available in Paid Premium Edition!", contact_bank ); ?>");
+	function ux_button_pro_version()
+	{
+		alert("<?php _e( "These Features are only available in Premium Editions!", contact_bank ); ?>");
+	}
 }
-function ux_clr_font_color_label_setting()
+if (typeof(ux_clr_font_color_label_setting) != "function")
 {
-	jQuery("#clr_font_color").farbtastic("#ux_clr_font_color").slideDown();
-	jQuery("#ux_clr_font_color").focus();
+	function ux_clr_font_color_label_setting()
+	{
+		jQuery("#clr_font_color").farbtastic("#ux_clr_font_color").slideDown();
+		jQuery("#ux_clr_font_color").focus();
+	}
 }
-function ux_clr_font_color_input_settings()
+if (typeof(ux_clr_font_color_input_settings) != "function")
 {
-	jQuery("#clr_text_color").farbtastic("#ux_clr_text_color_input_field").slideDown();
-	jQuery("#ux_clr_text_color_input_field").focus();
+	function ux_clr_font_color_input_settings()
+	{
+		jQuery("#clr_text_color").farbtastic("#ux_clr_text_color_input_field").slideDown();
+		jQuery("#ux_clr_text_color_input_field").focus();
+	}
 }
-function ux_clr_border_color_input_settings()
+if (typeof(ux_clr_border_color_input_settings) != "function")
 {
-	jQuery("#clr_border_color").farbtastic("#ux_clr_border_color_input_field").slideDown();
-	jQuery("#ux_clr_border_color_input_field").focus();
+	function ux_clr_border_color_input_settings()
+	{
+		jQuery("#clr_border_color").farbtastic("#ux_clr_border_color_input_field").slideDown();
+		jQuery("#ux_clr_border_color_input_field").focus();
+	}
 }
-function ux_clr_BG_color_input_settings()
+if (typeof(ux_clr_BG_color_input_settings) != "function")
 {
-	jQuery("#clr_bg_color").farbtastic("#ux_clr_bg_color_input_field").slideDown();
-	jQuery("#ux_clr_bg_color_input_field").focus();
+	function ux_clr_BG_color_input_settings()
+	{
+		jQuery("#clr_bg_color").farbtastic("#ux_clr_bg_color_input_field").slideDown();
+		jQuery("#ux_clr_bg_color_input_field").focus();
+	}
 }
-function ux_clr_BG_color_submit_btn_settings()
+if (typeof(ux_clr_BG_color_submit_btn_settings) != "function")
 {
-	jQuery("#clr_bg_color_submit_button").farbtastic("#ux_clr_bg_color_submit_button").slideDown();
-	jQuery("#ux_clr_bg_color_submit_button").focus();
+	function ux_clr_BG_color_submit_btn_settings()
+	{
+		jQuery("#clr_bg_color_submit_button").farbtastic("#ux_clr_bg_color_submit_button").slideDown();
+		jQuery("#ux_clr_bg_color_submit_button").focus();
+	}
 }
-function ux_clr_hover_BG_color_submit_btn_settings()
+if (typeof(ux_clr_hover_BG_color_submit_btn_settings) != "function")
 {
-	jQuery("#clr_hover_bg_color_submit_button").farbtastic("#ux_clr_hover_bg_color_submit_button").slideDown();
-	jQuery("#ux_clr_hover_bg_color_submit_button").focus();
+	function ux_clr_hover_BG_color_submit_btn_settings()
+	{
+		jQuery("#clr_hover_bg_color_submit_button").farbtastic("#ux_clr_hover_bg_color_submit_button").slideDown();
+		jQuery("#ux_clr_hover_bg_color_submit_button").focus();
+	}
 }
-function ux_clr_text_color_submit_btn_settings()
+if (typeof(ux_clr_text_color_submit_btn_settings) != "function")
 {
-	jQuery("#clr_text_color_submit_button").farbtastic("#ux_clr_text_color_submit_button").slideDown();
-	jQuery("#ux_clr_text_color_submit_button").focus();	
+	function ux_clr_text_color_submit_btn_settings()
+	{
+		jQuery("#clr_text_color_submit_button").farbtastic("#ux_clr_text_color_submit_button").slideDown();
+		jQuery("#ux_clr_text_color_submit_button").focus();
+	}
 }
-function ux_clr_hover_border_color_submit_btn_settings()
+if (typeof(ux_clr_hover_border_color_submit_btn_settings) != "function")
 {
-	jQuery("#clr_border_color_submit_button").farbtastic("#ux_clr_border_color_submit_button").slideDown();
-	jQuery("#ux_clr_border_color_submit_button").focus();	
+	function ux_clr_hover_border_color_submit_btn_settings()
+	{
+		jQuery("#clr_border_color_submit_button").farbtastic("#ux_clr_border_color_submit_button").slideDown();
+		jQuery("#ux_clr_border_color_submit_button").focus();
+	}
 }
-function ux_clr_bg_color_sucess_msg_settings()
+if (typeof(ux_clr_bg_color_sucess_msg_settings) != "function")
 {
-	jQuery("#clr_bg_color_success_msg").farbtastic("#ux_clr_bg_color_success_msg").slideDown();
-	jQuery("#ux_clr_bg_color_success_msg").focus();		
+	function ux_clr_bg_color_sucess_msg_settings()
+	{
+		jQuery("#clr_bg_color_success_msg").farbtastic("#ux_clr_bg_color_success_msg").slideDown();
+		jQuery("#ux_clr_bg_color_success_msg").focus();
+	}
 }
-function ux_clr_border_color_sucess_msg_settings()
+if (typeof(ux_clr_border_color_sucess_msg_settings) != "function")
 {
-	jQuery("#clr_border_color_success_msg").farbtastic("#ux_clr_border_color_success_msg").slideDown();
-	jQuery("#ux_clr_border_color_success_msg").focus();		
+	function ux_clr_border_color_sucess_msg_settings()
+	{
+		jQuery("#clr_border_color_success_msg").farbtastic("#ux_clr_border_color_success_msg").slideDown();
+		jQuery("#ux_clr_border_color_success_msg").focus();
+	}
 }
-function ux_clr_text_color_sucess_msg_settings()
+if (typeof(ux_clr_text_color_sucess_msg_settings) != "function")
 {
-	jQuery("#clr_text_color_success_msg").farbtastic("#ux_clr_text_color_success_msg").slideDown();
-	jQuery("#ux_clr_text_color_success_msg").focus();		
+	function ux_clr_text_color_sucess_msg_settings()
+	{
+		jQuery("#clr_text_color_success_msg").farbtastic("#ux_clr_text_color_success_msg").slideDown();
+		jQuery("#ux_clr_text_color_success_msg").focus();
+	}
 }
-function ux_clr_BG_color_error_msg_settings()
+if (typeof(ux_clr_BG_color_error_msg_settings) != "function")
 {
-	jQuery("#clr_bg_color_error_msg").farbtastic("#ux_clr_bg_color_error_msg").slideDown();
-	jQuery("#ux_clr_bg_color_error_msg").focus();
+	function ux_clr_BG_color_error_msg_settings()
+	{
+		jQuery("#clr_bg_color_error_msg").farbtastic("#ux_clr_bg_color_error_msg").slideDown();
+		jQuery("#ux_clr_bg_color_error_msg").focus();
+	}
 }
-function ux_clr_border_color_error_msg_settings() 
+if (typeof(ux_clr_border_color_error_msg_settings) != "function")
 {
-	jQuery("#clr_border_color_error_msg").farbtastic("#ux_clr_border_color_error_msg").slideDown();
-	jQuery("#ux_clr_border_color_error_msg").focus();
+	function ux_clr_border_color_error_msg_settings()
+	{
+		jQuery("#clr_border_color_error_msg").farbtastic("#ux_clr_border_color_error_msg").slideDown();
+		jQuery("#ux_clr_border_color_error_msg").focus();
+	}
 }
-function ux_clr_text_color_error_msg_settings() 
+if (typeof(ux_clr_text_color_error_msg_settings) != "function")
 {
-	jQuery("#clr_text_color_error_msg").farbtastic("#ux_clr_text_color_error_msg").slideDown();
-	jQuery("#ux_clr_text_color_error_msg").focus();
+	function ux_clr_text_color_error_msg_settings()
+	{
+		jQuery("#clr_text_color_error_msg").farbtastic("#ux_clr_text_color_error_msg").slideDown();
+		jQuery("#ux_clr_text_color_error_msg").focus();
+	}
 }
 jQuery("#ux_clr_font_color").blur(function(){jQuery("#clr_font_color").slideUp()});
 jQuery("#ux_clr_text_color_input_field").blur(function(){jQuery("#clr_text_color").slideUp()});
@@ -1030,113 +1074,119 @@ jQuery("#ux_clr_bg_color_error_msg").blur(function(){jQuery("#clr_bg_color_error
 jQuery("#ux_clr_border_color_error_msg").blur(function(){jQuery("#clr_border_color_error_msg").slideUp()});
 jQuery("#ux_clr_text_color_error_msg").blur(function(){jQuery("#clr_text_color_error_msg").slideUp()});
 
-function OnlyNumbers(e) ///////////////////////////////////allow only digits
+if (typeof(OnlyNumbers) != "function")
 {
-	var regex = new RegExp("^[0-9 \b]*$");
-	var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
-	if (regex.test(str)) {
-	return true;
-	}
-	e.preventDefault();
-	return false;
-}
-function select_form_layout()
-{
-    var form_id = jQuery("#ux_ddl_select_form").val();
-   
-    jQuery.post(ajaxurl, "form_id="+form_id+"&param=fetch_control_values&action=layout_settings_contact_library", function(data)
+	function OnlyNumbers(e) ///////////////////////////////////allow only digits
 	{
-		
-		if(data != "undefined")
-		{
-			
-			var dataJson = jQuery.parseJSON(data);
-	        jQuery("#ux_ddl_font_family").val(dataJson.label_setting_font_family);
-	        jQuery("#ux_clr_font_color").val(dataJson.label_setting_font_color);
-	        jQuery("#ux_clr_font_color").css("background-color",dataJson.label_setting_font_color);
-	        jQuery("#ux_clr_font_color").css("color","#ffffff");
-	        jQuery("#ux_ddl_font_style").val(dataJson.label_setting_font_style);
-	        jQuery("#ux_txt_font_size").val(dataJson.label_setting_font_size);
-	        dataJson.label_setting_font_align_left == "0" ? jQuery("#ux_rdl_font_align_left").attr("checked","checked") : jQuery("#ux_rdl_font_align_right").attr("checked","checked") ;
-	        jQuery("#ux_ddl_label_position").val(dataJson.label_setting_label_position);
-	        jQuery("#ux_ddl_field_size").val(dataJson.label_setting_field_size);
-	        jQuery("#ux_ddl_field_align").val(dataJson.label_setting_field_align);
-	        dataJson.label_setting_hide_label == "1" ? jQuery("#ux_chk_hide_label").attr("checked","checked") : jQuery("#ux_chk_hide_label").removeAttr("checked");
-			jQuery("#ux_ddl_direction").val(dataJson.label_setting_text_direction);
-			
-	        jQuery("#ux_ddl_font_family_input_field").val(dataJson.input_field_font_family);
-	        jQuery("#ux_clr_text_color_input_field").val(dataJson.input_field_font_color);
-	        jQuery("#ux_clr_text_color_input_field").css("background-color",dataJson.input_field_font_color);
-	        jQuery("#ux_clr_text_color_input_field").css("color","#ffffff");
-	        jQuery("#ux_ddl_font_style_input_field").val(dataJson.input_field_font_style);
-	        jQuery("#ux_txt_font_size_input_field").val(dataJson.input_field_font_size);
-	        jQuery("#ux_txt_border_radius_input_field").val(dataJson.input_field_border_radius);
-	        jQuery("#ux_clr_border_color_input_field").val(dataJson.input_field_border_color);
-	        jQuery("#ux_clr_border_color_input_field").css("background-color",dataJson.input_field_border_color);
-	        jQuery("#ux_clr_border_color_input_field").css("color","#ffffff");
-	        jQuery("#ux_txt_border_size_input_field").val(dataJson.input_field_border_size);
-	        jQuery("#ux_ddl_border_style_input_field").val(dataJson.input_field_border_style);
-	        jQuery("#ux_clr_bg_color_input_field").val(dataJson.input_field_clr_bg_color);
-	        jQuery("#ux_clr_bg_color_input_field").css("background-color",dataJson.input_field_clr_bg_color);
-	        jQuery("#ux_clr_bg_color_input_field").css("color","#000000");
-	        dataJson.input_field_rdl_multiple_row == "0" ? jQuery("#ux_rdl_multiple_row_input_field").attr("checked","checked") : jQuery("#ux_rdl_single_row_input_field").attr("checked","checked");
-			dataJson.input_field_rdl_text_align == "0" ? jQuery("#ux_rdl_font_align_left_input_field").attr("checked","checked") : jQuery("#ux_rdl_font_align_right_input_field").attr("checked","checked") ;
-	        jQuery("#ux_ddl_input_field_direction").val(dataJson.input_field_text_direction);
-	        jQuery("#ux_input_size_input_field").val(dataJson.input_field_input_size);
-	
-	
-			jQuery("#ux_ddl_font_family_submit_button").val(dataJson.submit_button_font_family);
-	        jQuery("#ux_txt_text_submit_button").val(dataJson.submit_button_text);
-	        jQuery("#ux_ddl_font_style_submit_button").val(dataJson.submit_button_font_style);
-	        jQuery("#ux_ddl_font_size_submit_button").val(dataJson.submit_button_font_size);
-	        jQuery("#ux_txt_button_width_submit_button").val(dataJson.submit_button_button_width);
-	        jQuery("#ux_clr_bg_color_submit_button").val(dataJson.submit_button_bg_color);
-	        jQuery("#ux_clr_bg_color_submit_button").css("background-color",dataJson.submit_button_bg_color);
-	        jQuery("#ux_clr_bg_color_submit_button").css("color","#ffffff");
-	        jQuery("#ux_clr_hover_bg_color_submit_button").val(dataJson.submit_button_hover_bg_color);
-	        jQuery("#ux_clr_hover_bg_color_submit_button").css("background-color",dataJson.submit_button_hover_bg_color);
-	        jQuery("#ux_clr_hover_bg_color_submit_button").css("color","#ffffff");
-	        jQuery("#ux_clr_text_color_submit_button").val(dataJson.submit_button_text_color);
-	        jQuery("#ux_clr_text_color_submit_button").css("background-color",dataJson.submit_button_text_color);
-	        jQuery("#ux_clr_text_color_submit_button").css("color","#000000");
-	        jQuery("#ux_clr_border_color_submit_button").val(dataJson.submit_button_border_color);
-	        jQuery("#ux_clr_border_color_submit_button").css("background-color",dataJson.submit_button_border_color);
-	        jQuery("#ux_clr_border_color_submit_button").css("color","#ffffff");
-	        jQuery("#ux_clr_border_size_submit_button").val(dataJson.submit_button_border_size);
-	        jQuery("#ux_txt_border_radius_submit_button").val(dataJson.submit_button_border_radius);
-	        dataJson.submit_button_rdl_text_align == "0" ? jQuery("#ux_rdl_font_align_left_submit_button").attr("checked","checked") : jQuery("#ux_rdl_font_align_right_submit_button").attr("checked","checked") ;
-	        jQuery("#ux_ddl_submit_button_direction").val(dataJson.submit_button_text_direction);
-	
-	        jQuery("#ux_ddl_font_family_success_msg").val(dataJson.success_msg_font_family);
-	        jQuery("#ux_ddl_font_size_success_msg").val(dataJson.success_msg_font_size);
-	        jQuery("#ux_clr_bg_color_success_msg").val(dataJson.success_msg_bg_color);
-	        jQuery("#ux_clr_bg_color_success_msg").css("background-color",dataJson.success_msg_bg_color);
-	        jQuery("#ux_clr_bg_color_success_msg").css("color","#ffffff");
-	        jQuery("#ux_clr_border_color_success_msg").val(dataJson.success_msg_border_color);
-	        jQuery("#ux_clr_border_color_success_msg").css("background-color",dataJson.success_msg_border_color);
-	        jQuery("#ux_clr_border_color_success_msg").css("color","#ffffff");
-	        jQuery("#ux_clr_text_color_success_msg").val(dataJson.success_msg_text_color);
-	        jQuery("#ux_clr_text_color_success_msg").css("background-color",dataJson.success_msg_text_color);
-	        jQuery("#ux_clr_text_color_success_msg").css("color","#ffffff");
-	        dataJson.success_msg_rdl_text_align == "0" ? jQuery("#ux_rdl_font_align_left_success_msg").attr("checked","checked") : jQuery("#ux_rdl_font_align_right_success_msg").attr("checked","checked") ;
-	        jQuery("#ux_ddl_success_msg_direction").val(dataJson.success_msg_text_direction);
-	
-	        jQuery("#ux_ddl_font_family_error_msg").val(dataJson.error_msg_font_family);
-	        jQuery("#ux_ddl_font_size_error_msg").val(dataJson.error_msg_font_size);
-	        jQuery("#ux_clr_bg_color_error_msg").val(dataJson.error_msg_bg_color);
-	        jQuery("#ux_clr_bg_color_error_msg").css("background-color",dataJson.error_msg_bg_color);
-	        jQuery("#ux_clr_bg_color_error_msg").css("color","#ffffff");
-	        jQuery("#ux_clr_border_color_error_msg").val(dataJson.error_msg_border_color);
-	        jQuery("#ux_clr_border_color_error_msg").css("background-color",dataJson.error_msg_border_color);
-	        jQuery("#ux_clr_border_color_error_msg").css("color","#ffffff");
-	        jQuery("#ux_clr_text_color_error_msg").val(dataJson.error_msg_text_color);
-	        jQuery("#ux_clr_text_color_error_msg").css("background-color",dataJson.error_msg_text_color);
-	        jQuery("#ux_clr_text_color_error_msg").css("color","#ffffff");
-	        dataJson.error_msg_rdl_text_align == "0" ? jQuery("#ux_rdl_font_align_left_error_msg").attr("checked","checked") : jQuery("#ux_rdl_font_align_right_error_msg").attr("checked","checked") ;
-	        jQuery("#ux_ddl_error_msg_direction").val(dataJson.error_msg_text_direction);
+		var regex = new RegExp("^[0-9 \b]*$");
+		var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+		if (regex.test(str)) {
+		return true;
 		}
-   });
+		e.preventDefault();
+		return false;
+	}
 }
+if (typeof(select_form_layout) != "function")
+{
+function select_form_layout()
+		{
+		    var form_id = jQuery("#ux_ddl_select_form").val();
+
+		    jQuery.post(ajaxurl, "form_id="+form_id+"&param=fetch_control_values&action=layout_settings_contact_library", function(data)
+			{
+
+				if(data != "undefined")
+				{
+
+					var dataJson = jQuery.parseJSON(data);
+			        jQuery("#ux_ddl_font_family").val(dataJson.label_setting_font_family);
+			        jQuery("#ux_clr_font_color").val(dataJson.label_setting_font_color);
+			        jQuery("#ux_clr_font_color").css("background-color",dataJson.label_setting_font_color);
+			        jQuery("#ux_clr_font_color").css("color","#ffffff");
+			        jQuery("#ux_ddl_font_style").val(dataJson.label_setting_font_style);
+			        jQuery("#ux_txt_font_size").val(dataJson.label_setting_font_size);
+			        dataJson.label_setting_font_align_left == "0" ? jQuery("#ux_rdl_font_align_left").attr("checked","checked") : jQuery("#ux_rdl_font_align_right").attr("checked","checked") ;
+			        jQuery("#ux_ddl_label_position").val(dataJson.label_setting_label_position);
+			        jQuery("#ux_ddl_field_size").val(dataJson.label_setting_field_size);
+			        jQuery("#ux_ddl_field_align").val(dataJson.label_setting_field_align);
+			        dataJson.label_setting_hide_label == "1" ? jQuery("#ux_chk_hide_label").attr("checked","checked") : jQuery("#ux_chk_hide_label").removeAttr("checked");
+					jQuery("#ux_ddl_direction").val(dataJson.label_setting_text_direction);
+
+			        jQuery("#ux_ddl_font_family_input_field").val(dataJson.input_field_font_family);
+			        jQuery("#ux_clr_text_color_input_field").val(dataJson.input_field_font_color);
+			        jQuery("#ux_clr_text_color_input_field").css("background-color",dataJson.input_field_font_color);
+			        jQuery("#ux_clr_text_color_input_field").css("color","#ffffff");
+			        jQuery("#ux_ddl_font_style_input_field").val(dataJson.input_field_font_style);
+			        jQuery("#ux_txt_font_size_input_field").val(dataJson.input_field_font_size);
+			        jQuery("#ux_txt_border_radius_input_field").val(dataJson.input_field_border_radius);
+			        jQuery("#ux_clr_border_color_input_field").val(dataJson.input_field_border_color);
+			        jQuery("#ux_clr_border_color_input_field").css("background-color",dataJson.input_field_border_color);
+			        jQuery("#ux_clr_border_color_input_field").css("color","#ffffff");
+			        jQuery("#ux_txt_border_size_input_field").val(dataJson.input_field_border_size);
+			        jQuery("#ux_ddl_border_style_input_field").val(dataJson.input_field_border_style);
+			        jQuery("#ux_clr_bg_color_input_field").val(dataJson.input_field_clr_bg_color);
+			        jQuery("#ux_clr_bg_color_input_field").css("background-color",dataJson.input_field_clr_bg_color);
+			        jQuery("#ux_clr_bg_color_input_field").css("color","#000000");
+			        dataJson.input_field_rdl_multiple_row == "0" ? jQuery("#ux_rdl_multiple_row_input_field").attr("checked","checked") : jQuery("#ux_rdl_single_row_input_field").attr("checked","checked");
+					dataJson.input_field_rdl_text_align == "0" ? jQuery("#ux_rdl_font_align_left_input_field").attr("checked","checked") : jQuery("#ux_rdl_font_align_right_input_field").attr("checked","checked") ;
+			        jQuery("#ux_ddl_input_field_direction").val(dataJson.input_field_text_direction);
+			        jQuery("#ux_input_size_input_field").val(dataJson.input_field_input_size);
+
+
+					jQuery("#ux_ddl_font_family_submit_button").val(dataJson.submit_button_font_family);
+			        jQuery("#ux_txt_text_submit_button").val(dataJson.submit_button_text);
+			        jQuery("#ux_ddl_font_style_submit_button").val(dataJson.submit_button_font_style);
+			        jQuery("#ux_ddl_font_size_submit_button").val(dataJson.submit_button_font_size);
+			        jQuery("#ux_txt_button_width_submit_button").val(dataJson.submit_button_button_width);
+			        jQuery("#ux_clr_bg_color_submit_button").val(dataJson.submit_button_bg_color);
+			        jQuery("#ux_clr_bg_color_submit_button").css("background-color",dataJson.submit_button_bg_color);
+			        jQuery("#ux_clr_bg_color_submit_button").css("color","#ffffff");
+			        jQuery("#ux_clr_hover_bg_color_submit_button").val(dataJson.submit_button_hover_bg_color);
+			        jQuery("#ux_clr_hover_bg_color_submit_button").css("background-color",dataJson.submit_button_hover_bg_color);
+			        jQuery("#ux_clr_hover_bg_color_submit_button").css("color","#ffffff");
+			        jQuery("#ux_clr_text_color_submit_button").val(dataJson.submit_button_text_color);
+			        jQuery("#ux_clr_text_color_submit_button").css("background-color",dataJson.submit_button_text_color);
+			        jQuery("#ux_clr_text_color_submit_button").css("color","#000000");
+			        jQuery("#ux_clr_border_color_submit_button").val(dataJson.submit_button_border_color);
+			        jQuery("#ux_clr_border_color_submit_button").css("background-color",dataJson.submit_button_border_color);
+			        jQuery("#ux_clr_border_color_submit_button").css("color","#ffffff");
+			        jQuery("#ux_clr_border_size_submit_button").val(dataJson.submit_button_border_size);
+			        jQuery("#ux_txt_border_radius_submit_button").val(dataJson.submit_button_border_radius);
+			        dataJson.submit_button_rdl_text_align == "0" ? jQuery("#ux_rdl_font_align_left_submit_button").attr("checked","checked") : jQuery("#ux_rdl_font_align_right_submit_button").attr("checked","checked") ;
+			        jQuery("#ux_ddl_submit_button_direction").val(dataJson.submit_button_text_direction);
+
+			        jQuery("#ux_ddl_font_family_success_msg").val(dataJson.success_msg_font_family);
+			        jQuery("#ux_ddl_font_size_success_msg").val(dataJson.success_msg_font_size);
+			        jQuery("#ux_clr_bg_color_success_msg").val(dataJson.success_msg_bg_color);
+			        jQuery("#ux_clr_bg_color_success_msg").css("background-color",dataJson.success_msg_bg_color);
+			        jQuery("#ux_clr_bg_color_success_msg").css("color","#ffffff");
+			        jQuery("#ux_clr_border_color_success_msg").val(dataJson.success_msg_border_color);
+			        jQuery("#ux_clr_border_color_success_msg").css("background-color",dataJson.success_msg_border_color);
+			        jQuery("#ux_clr_border_color_success_msg").css("color","#ffffff");
+			        jQuery("#ux_clr_text_color_success_msg").val(dataJson.success_msg_text_color);
+			        jQuery("#ux_clr_text_color_success_msg").css("background-color",dataJson.success_msg_text_color);
+			        jQuery("#ux_clr_text_color_success_msg").css("color","#ffffff");
+			        dataJson.success_msg_rdl_text_align == "0" ? jQuery("#ux_rdl_font_align_left_success_msg").attr("checked","checked") : jQuery("#ux_rdl_font_align_right_success_msg").attr("checked","checked") ;
+			        jQuery("#ux_ddl_success_msg_direction").val(dataJson.success_msg_text_direction);
+
+			        jQuery("#ux_ddl_font_family_error_msg").val(dataJson.error_msg_font_family);
+			        jQuery("#ux_ddl_font_size_error_msg").val(dataJson.error_msg_font_size);
+			        jQuery("#ux_clr_bg_color_error_msg").val(dataJson.error_msg_bg_color);
+			        jQuery("#ux_clr_bg_color_error_msg").css("background-color",dataJson.error_msg_bg_color);
+			        jQuery("#ux_clr_bg_color_error_msg").css("color","#ffffff");
+			        jQuery("#ux_clr_border_color_error_msg").val(dataJson.error_msg_border_color);
+			        jQuery("#ux_clr_border_color_error_msg").css("background-color",dataJson.error_msg_border_color);
+			        jQuery("#ux_clr_border_color_error_msg").css("color","#ffffff");
+			        jQuery("#ux_clr_text_color_error_msg").val(dataJson.error_msg_text_color);
+			        jQuery("#ux_clr_text_color_error_msg").css("background-color",dataJson.error_msg_text_color);
+			        jQuery("#ux_clr_text_color_error_msg").css("color","#ffffff");
+			        dataJson.error_msg_rdl_text_align == "0" ? jQuery("#ux_rdl_font_align_left_error_msg").attr("checked","checked") : jQuery("#ux_rdl_font_align_right_error_msg").attr("checked","checked") ;
+			        jQuery("#ux_ddl_error_msg_direction").val(dataJson.error_msg_text_direction);
+				}
+		   });
+		}
+	}
 
 jQuery(document).ready(function()
 {
@@ -1159,6 +1209,6 @@ jQuery(document).ready(function()
 	}
 });
 </script>
-<?php 
+<?php
 }
 ?>

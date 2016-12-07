@@ -1,5 +1,5 @@
 <?php
-
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -11,7 +11,7 @@ switch($cb_role)
 	case "author":
 		$cb_user_role_permission = "publish_posts";
 		break;
-	
+
 }
 if (!current_user_can($cb_user_role_permission))
 {
@@ -43,7 +43,7 @@ else
 												<div class="fluid-layout">
 													<div class="layout-control-group">
 														<label class="layout-control-label"><?php _e( "Select Form", contact_bank ); ?> :</label>
-														<div class="layout-controls">	
+														<div class="layout-controls">
 															<?php
 															global $wpdb;
 															$form_data = $wpdb->get_results
@@ -91,33 +91,33 @@ else
 jQuery(document).ready(function()
 {
 	select_form_id();
-	
-			function exportTableToCSV(table, filename) 
+		if (typeof(exportTableToCSV) != "function")
+		{
+			function exportTableToCSV(table, filename)
 			{
-	
 			var rows = table.find('tr:has(td)'),
 				csv = "";
 	            tmpColDelim = String.fromCharCode(11),
-	            tmpRowDelim = String.fromCharCode(0), 
+	            tmpRowDelim = String.fromCharCode(0),
 				colDelim = '","',
 	            rowDelim = '"\r\n"',
 					csv = '"' + rows.map(function (i, row) {
 	            	var row = jQuery(row),
-	                    cols = row.find('td'); 
+	                    cols = row.find('td');
 					return cols.map(function (j, col) {
 	                    var col = jQuery(col),
 	                        text = col.text();
-	
+
 	                    return text.replace('"', '""');
-	
+
 	                }).get().join(tmpColDelim);
-	
+
 	            }).get().join(tmpRowDelim)
-	            	
+
 	                .split(tmpRowDelim).join(rowDelim)
 	                .split(tmpColDelim).join(colDelim) + '"',
 					csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
-			
+
 	        jQuery(this)
 	            .attr({
 	            'download': filename,
@@ -125,7 +125,8 @@ jQuery(document).ready(function()
 	                'target': '_blank'
 	        });
 	    }
-		jQuery("#export").on('click', function (event) 
+		}
+		jQuery("#export").on('click', function (event)
 	    {
 	    	var form_id = jQuery("#select_form").val();
 	    	if(form_id != 0)
@@ -137,37 +138,43 @@ jQuery(document).ready(function()
 				alert("<?php _e( "Please select the Form first.", contact_bank ); ?>");
 			}
 	    });
-	
-	
+
+
 });
-function select_form_id()
+if (typeof(select_form_id) != "function")
 {
-	var form_id = jQuery("#select_form").val();
-	if(form_id != 0)
+	function select_form_id()
 	{
-		jQuery.post(ajaxurl, "form_id="+form_id+"&param=frontend_form_data&action=frontend_data_contact_library", function(data)
+		var form_id = jQuery("#select_form").val();
+		if(form_id != 0)
 		{
-			if(jQuery('#data-table-frontend').length > 0)
+			jQuery.post(ajaxurl, "form_id="+form_id+"&param=frontend_form_data&action=frontend_data_contact_library", function(data)
 			{
-				oTable = jQuery('#data-table-frontend').dataTable();
-				oTable.fnDestroy();
-				jQuery("#ux_frontend_data_postback").empty();
-				
-				jQuery("#ux_frontend_data_postback").append(data);
-				jQuery(".fluid-layout .table thead th").css('vertical-align','top');
-				oTable.fnDraw();
-			}
-			else
-			{
-				jQuery("#ux_frontend_data_postback").append(data);
-				jQuery(".fluid-layout .table thead th").css('vertical-align','top');
-			}
-		});
+				if(jQuery('#data-table-frontend').length > 0)
+				{
+					oTable = jQuery('#data-table-frontend').dataTable();
+					oTable.fnDestroy();
+					jQuery("#ux_frontend_data_postback").empty();
+
+					jQuery("#ux_frontend_data_postback").append(data);
+					jQuery(".fluid-layout .table thead th").css('vertical-align','top');
+					oTable.fnDraw();
+				}
+				else
+				{
+					jQuery("#ux_frontend_data_postback").append(data);
+					jQuery(".fluid-layout .table thead th").css('vertical-align','top');
+				}
+			});
+		}
 	}
 }
-function delete_form_entry()
+if (typeof(delete_form_entry) != "function")
 {
-	alert("<?php _e( "This Feature is only available in Paid Premium Edition!", contact_bank ); ?>");
+	function delete_form_entry()
+	{
+		alert("<?php _e( "This Feature is only available in Premium Editions!", contact_bank ); ?>");
+	}
 }
 
 
@@ -176,6 +183,6 @@ function delete_form_entry()
 
 
 </script>
-<?php 
+<?php
 }
 ?>

@@ -1,4 +1,5 @@
-<?php 
+<?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -14,14 +15,14 @@ switch($cb_role)
 if (!current_user_can($user_role_permission))
 {
 	return;
-} 
+}
 else
 {
 	include( ABSPATH . "wp-admin/includes/plugin-install.php" );
 	global $tabs, $tab, $paged, $type, $term;
 	$tabs = array();
 	$tab = "search";
-	$per_page = 10;
+	$per_page = 20;
 	$args = array
 	(
 		"author"=> "contact-banker",
@@ -43,20 +44,20 @@ else
 					'number' => 0,
 			);
 			$r = wp_parse_args( $args, $defaults );
-	
+
 			// Non-english decimal places when the $rating is coming from a string
 			$rating = str_replace( ',', '.', $r['rating'] );
-	
+
 			// Convert Percentage to star rating, 0..5 in .5 increments
 			if ( 'percent' == $r['type'] ) {
 				$rating = round( $rating / 10, 0 ) / 2;
 			}
-	
+
 			// Calculate the number of each type of star needed
 			$full_stars = floor( $rating );
 			$half_stars = ceil( $rating - $full_stars );
 			$empty_stars = 5 - $full_stars - $half_stars;
-	
+
 			if ( $r['number'] ) {
 				/* translators: 1: The rating, 2: The number of ratings */
 				$format = _n( '%1$s rating based on %2$s rating', '%1$s rating based on %2$s ratings', $r['number'] );
@@ -65,7 +66,7 @@ else
 				/* translators: 1: The rating */
 				$title = sprintf( __( '%s rating' ), number_format_i18n( $rating, 1 ) );
 			}
-	
+
 			echo '<div class="star-rating" title="' . esc_attr( $title ) . '">';
 			echo '<span class="screen-reader-text">' . $title . '</span>';
 			echo str_repeat( '<div class="star star-full"></div>', $full_stars );
@@ -80,19 +81,19 @@ else
 			<div id="post-body" class="metabox-holder">
 				<div id="postbox-container-2" class="postbox-container">
 					<div id="advanced" class="meta-box-sortables">
-						<div id="tech_bank_get_started" class="postbox" >
+						<div id="contact_bank_get_started" class="postbox" >
 							<div class="handlediv" data-target="ux_recommendation" title="Click to toggle" data-toggle="collapse"><br></div>
 							<h3 class="hndle"><span><?php _e("Recommendations", tech_bank); ?></span></h3>
 							<div class="inside">
-								<div id="ux_recommendation" class="tech_bank_layout">
-									<a class="btn btn-info" style="text-decoration:none" href="admin.php?page=contact_dashboard"><?php _e("Back to Dashboard", tech_bank);?></a>
+								<div id="ux_recommendation" class="contact_bank_layout">
+									<a class="btn btn-info" href="admin.php?page=contact_dashboard"><?php _e("Back to Dashboard", contact_bank);?></a>
 									<div class="separator-doubled"></div>
 									<div class="fluid-layout">
 										<div class="layout-span12">
 											<div class="wp-list-table plugin-install">
 												<div id="the-list">
-													<?php 
-													foreach ((array) $item as $plugin) 
+													<?php
+													foreach ((array) $item as $plugin)
 													{
 														if (is_object( $plugin))
 														{
@@ -101,16 +102,16 @@ else
 														if (!empty($plugin["icons"]["svg"]))
 														{
 															$plugin_icon_url = $plugin["icons"]["svg"];
-														} 
-														elseif (!empty( $plugin["icons"]["2x"])) 
+														}
+														elseif (!empty( $plugin["icons"]["2x"]))
 														{
 															$plugin_icon_url = $plugin["icons"]["2x"];
-														} 
+														}
 														elseif (!empty( $plugin["icons"]["1x"]))
 														{
 															$plugin_icon_url = $plugin["icons"]["1x"];
-														} 
-														else 
+														}
+														else
 														{
 															$plugin_icon_url = $plugin["icons"]["default"];
 														}
@@ -128,7 +129,7 @@ else
 														$name = strip_tags( $title . " " . $version );
 														$details_link   = self_admin_url( "plugin-install.php?tab=plugin-information&amp;plugin=" . $plugin["slug"] .
 														"&amp;TB_iframe=true&amp;width=600&amp;height=550" );
-														
+
 														/* translators: 1: Plugin name and version. */
 														$action_links[] = '<a href="' . esc_url( $details_link ) . '" class="thickbox" aria-label="' . esc_attr( sprintf("More information about %s", $name ) ) . '" data-title="' . esc_attr( $name ) . '">' . __( 'More Details' ) . '</a>';
 														$action_links = array();
@@ -166,16 +167,16 @@ else
 																	</a>
 																	<div class="name column-name">
 																		<h4>
-																			<a href="<?php echo esc_url( $details_link ); ?>" class="thickbox"><?php echo $title ?></a>
+																			<a href="<?php echo esc_url( $details_link ); ?>" class="thickbox"><?php echo $title; ?></a>
 																		</h4>
 																	</div>
 																	<div class="desc column-description">
 																		<p>
-																			<?php _e( $description,tech_bank); ?>
+																			<?php echo $description; ?>
 																		</p>
 																		<p class="authors">
 																			<cite>
-																				<?php _e("By ",tech_bank); echo $author ;?>
+																				<?php _e( "By ",tech_bank); echo $author;?>
 																			</cite>
 																		</p>
 																	</div>
@@ -188,7 +189,7 @@ else
 																				{
 																					echo implode("</li><li>", $action_links);
 																				}
-																					
+
 																				switch($plugin["slug"])
 																				{
 																					case "gallery-bank" :
@@ -219,7 +220,7 @@ else
 																							<a class="plugin-div-button install-now button" href="http://tech-banker.com/products/wp-captcha-bank/" target="_blank" >
 																								<?php _e("Visit Website", tech_bank); ?>
 																							</a>
-																						<?php 
+																						<?php
 																					break;
 																					case "wp-clean-up-optimizer" :
 																						?>
@@ -229,17 +230,17 @@ else
 																							<a class="plugin-div-button install-now button" href="http://tech-banker.com/products/wp-clean-up-optimizer/" target="_blank" >
 																								<?php _e("Visit Website", tech_bank); ?>
 																							</a>
-																						<?php 
+																						<?php
 																					break;
-																					case "google-maps-bank" :
+																					case "google-maps-bank":
 																						?>
-																						<a class="plugin-div-button install-now button" href="http://tech-banker.com/products/wp-google-maps-bank/pricing/" target="_blank" >
-																							<?php _e("Premium Editions", tech_bank); ?>
-																						</a>
-																						<a class="plugin-div-button install-now button" href="http://tech-banker.com/products/wp-google-maps-bank/" target="_blank" >
-																							<?php _e("Visit Website", tech_bank); ?>
-																						</a>
-																						<?php 
+																							<a class="plugin-div-button install-now button" href="http://tech-banker.com/products/wp-google-maps-bank/pricing/" target="_blank" >
+																								<?php _e("Premium Editions", tech_bank); ?>
+																							</a>
+																							<a class="plugin-div-button install-now button" href="http://tech-banker.com/products/wp-google-maps-bank/" target="_blank" >
+																								<?php _e("Visit Website", tech_bank); ?>
+																							</a>
+																						<?php
 																					break;
 																					case "wp-backup-bank":
 																						?>
@@ -277,11 +278,11 @@ else
 																	if ( !empty($plugin["tested"]) && version_compare(substr($GLOBALS["wp_version"], 0, strlen($plugin["tested"])), $plugin["tested"], ">"))
 																	{
 																		echo '<span class="compatibility-untested">' . __( "<strong>Untested</strong> with your version of WordPress" ) . '</span>';
-																	} 
-																	elseif (!empty($plugin["requires"]) && version_compare(substr($GLOBALS["wp_version"], 0, strlen($plugin["requires"])), $plugin["requires"], "<")) 
+																	}
+																	elseif (!empty($plugin["requires"]) && version_compare(substr($GLOBALS["wp_version"], 0, strlen($plugin["requires"])), $plugin["requires"], "<"))
 																	{
 																		echo '<span class="compatibility-incompatible">' . __("Incompatible with your version of WordPress") . '</span>';
-																	} 
+																	}
 																	else
 																	{
 																		echo '<span class="compatibility-compatible">' . __("Compatible with your version of WordPress") . '</span>';
@@ -305,6 +306,6 @@ else
 			</div>
 		</div>
 	</form>
-<?php 
+<?php
 }
 ?>

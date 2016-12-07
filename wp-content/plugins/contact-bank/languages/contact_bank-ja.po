@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Contact Bank\n"
-"POT-Creation-Date: 2015-03-03 15:05+0530\n"
-"PO-Revision-Date: 2015-03-05 11:02+0530\n"
+"POT-Creation-Date: 2016-07-18 18:20+0530\n"
+"PO-Revision-Date: 2016-07-18 18:20+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -11,155 +11,156 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.7.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
-"X-Poedit-Basepath: C:\\xampp\\htdocs\\wordpress4.0.1\\wp-content\\plugins"
+"X-Poedit-Basepath: C:\\xampp\\htdocs\\wordpress3\\wp-content\\plugins"
 "\\contact-bank\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: contact-bank.php:84 contact-bank.php:101 contact-bank.php:118
+#: contact-bank.php:89 contact-bank.php:106 contact-bank.php:123
 msgid "Contact Bank"
 msgstr "Contact Bank"
 
-#: contact-bank.php:85 contact-bank.php:102 contact-bank.php:119
-#: contact-bank.php:657 contact-bank.php:733 contact-bank.php:810
+#: contact-bank.php:90 contact-bank.php:107 contact-bank.php:124
+#: contact-bank.php:953 contact-bank.php:1030 contact-bank.php:1107
 #: views/header.php:115 views/header.php:129 views/header.php:143
 msgid "Dashboard"
 msgstr "ダッシュボード"
 
-#: contact-bank.php:87 contact-bank.php:104 contact-bank.php:121
-#: contact-bank.php:663 contact-bank.php:739 contact-bank.php:816
+#: contact-bank.php:92 contact-bank.php:109 contact-bank.php:126
+#: contact-bank.php:959 contact-bank.php:1036 contact-bank.php:1113
 #: views/automatic-plugin-update.php:28 views/automatic-plugin-update.php:32
 msgid "Plugin Updates"
 msgstr "プラグインのアップデート"
 
-#: contact-bank.php:88 contact-bank.php:105 contact-bank.php:122
-#: contact-bank.php:669 contact-bank.php:745 contact-bank.php:822
+#: contact-bank.php:93 contact-bank.php:110 contact-bank.php:127
+#: contact-bank.php:965 contact-bank.php:1042 contact-bank.php:1119
 #: views/header.php:116 views/header.php:130 views/header.php:144
 msgid "Short-Codes"
 msgstr "短·コード"
 
-#: contact-bank.php:89 contact-bank.php:106 contact-bank.php:123
-#: contact-bank.php:675 contact-bank.php:751 contact-bank.php:828
-#: views/contact_frontend_data.php:31 views/dashboard.php:124
+#: contact-bank.php:94 contact-bank.php:111 contact-bank.php:128
+#: contact-bank.php:971 contact-bank.php:1048 contact-bank.php:1125
+#: views/contact_frontend_data.php:30 views/dashboard.php:124
 #: views/header.php:117 views/header.php:131 views/header.php:145
 msgid "Form Entries"
 msgstr "フォーム-エントリ"
 
-#: contact-bank.php:90 contact-bank.php:107 contact-bank.php:124
-#: contact-bank.php:681 contact-bank.php:757 contact-bank.php:834
-#: views/contact_email_settings.php:30 views/dashboard.php:119
+#: contact-bank.php:95 contact-bank.php:112 contact-bank.php:129
+#: contact-bank.php:977 contact-bank.php:1054 contact-bank.php:1131
+#: views/contact_email_settings.php:29 views/dashboard.php:119
 #: views/header.php:118 views/header.php:132 views/header.php:146
 msgid "Email Settings"
 msgstr "電子メール設定"
 
-#: contact-bank.php:91 contact-bank.php:108 contact-bank.php:125
-#: contact-bank.php:687 contact-bank.php:763 contact-bank.php:840
+#: contact-bank.php:96 contact-bank.php:113 contact-bank.php:130
+#: contact-bank.php:983 contact-bank.php:1060 contact-bank.php:1137
 #: views/contact_bank_layout_settings.php:29 views/dashboard.php:114
 #: views/header.php:119 views/header.php:133 views/header.php:147
 msgid "Global Settings"
 msgstr "グローバル設定"
 
-#: contact-bank.php:92 contact-bank.php:109 contact-bank.php:126
-#: contact-bank.php:693 contact-bank.php:769 contact-bank.php:846
+#: contact-bank.php:97 contact-bank.php:114 contact-bank.php:131
+#: contact-bank.php:989 contact-bank.php:1066 contact-bank.php:1143
 #: views/contact-feedback.php:33
 msgid "Feature Requests"
 msgstr "機能リクエスト"
 
-#: contact-bank.php:93 contact-bank.php:110 contact-bank.php:127
-#: contact-bank.php:699 contact-bank.php:776
+#: contact-bank.php:98 contact-bank.php:115 contact-bank.php:132
+#: contact-bank.php:995 contact-bank.php:1073
 #: views/contact-bank-system-report.php:31
 msgid "System Status"
 msgstr "システムステータス"
 
-#: contact-bank.php:94 contact-bank.php:111 contact-bank.php:128
-#: contact-bank.php:705 contact-bank.php:782 contact-bank.php:852
+#: contact-bank.php:99 contact-bank.php:116 contact-bank.php:133
+#: contact-bank.php:1001 contact-bank.php:1079 contact-bank.php:1149
 #: views/header.php:85 views/header.php:120 views/header.php:134
 #: views/header.php:148
 msgid "Recommendations"
 msgstr "推奨事項"
 
-#: contact-bank.php:95 contact-bank.php:112 contact-bank.php:129
-#: contact-bank.php:712 contact-bank.php:789 contact-bank.php:859
+#: contact-bank.php:100 contact-bank.php:117 contact-bank.php:134
+#: contact-bank.php:1008 contact-bank.php:1086 contact-bank.php:1156
 #: views/header.php:121 views/header.php:135 views/header.php:149
+#: views/purchase_pro_version.php:32
 msgid "Premium Editions"
 msgstr "プレミアムエディション"
 
-#: contact-bank.php:96 contact-bank.php:113 contact-bank.php:130
-#: contact-bank.php:719 contact-bank.php:796 contact-bank.php:866
+#: contact-bank.php:101 contact-bank.php:118 contact-bank.php:135
+#: contact-bank.php:1015 contact-bank.php:1093 contact-bank.php:1163
 #: views/header.php:90 views/header.php:122 views/header.php:136
 #: views/header.php:150
 msgid "Our Other Services"
 msgstr "当社の他のサービス"
 
-#: contact-bank.php:874
+#: contact-bank.php:1176
 msgid "Add Contact Bank Form"
 msgstr "Contact Bank フォーム 加える"
 
-#: contact-bank.php:886
+#: contact-bank.php:1192
 msgid "Insert Contact Bank Form"
 msgstr "挿入 Contact Bank フォーム "
 
-#: contact-bank.php:888
+#: contact-bank.php:1194
 msgid "Select a form below to add it to your post or page."
 msgstr "以下のフォームを選択します,あなたの投稿又はページに追加し"
 
-#: contact-bank.php:893
+#: contact-bank.php:1199
 msgid "Form Name"
 msgstr "フォーム名"
 
-#: contact-bank.php:895
+#: contact-bank.php:1201
 msgid "Select a Form"
 msgstr "フォームを選択し"
 
-#: contact-bank.php:912
+#: contact-bank.php:1218
 msgid "Show Form Title"
 msgstr "ショー フォームタイトル"
 
-#: contact-bank.php:916
+#: contact-bank.php:1222
 msgid "Show Form Description"
 msgstr "ショー フォーム 説明"
 
-#: contact-bank.php:921
+#: contact-bank.php:1227
 msgid "Insert Form"
 msgstr "フォームを挿入"
 
-#: contact-bank.php:924
+#: contact-bank.php:1230
 msgid "Cancel"
 msgstr "取り消す"
 
-#: contact-bank.php:937
+#: contact-bank.php:1243
 msgid "Please choose a Form to insert into Shortcode"
 msgstr "ショートコードに挿入するフォームを選択してください"
 
-#: contact-bank.php:973
+#: contact-bank.php:1290
 msgid "View Contact Bank Documentation"
 msgstr "ビューContactBankドキュメンテーション"
 
-#: contact-bank.php:973
+#: contact-bank.php:1290
 msgid "Docs"
 msgstr "ドキュメント"
 
-#: contact-bank.php:974
+#: contact-bank.php:1291
 msgid "View Contact Bank Premium Editions"
 msgstr "ContactBankプレミアムエディションを表示"
 
-#: contact-bank.php:974
+#: contact-bank.php:1291
 msgid "Go for Premium!"
 msgstr "プレミアムのため行く！"
 
-#: contact-bank.php:1048
+#: contact-bank.php:1392
 msgid "Select Form :"
 msgstr "フォームを選択:"
 
-#: contact-bank.php:1050 views/contact_bank_layout_settings.php:45
+#: contact-bank.php:1394 views/contact_bank_layout_settings.php:45
 #: views/contact_bank_layout_settings.php:55
-#: views/contact_email_settings.php:37 views/contact_email_settings.php:53
-#: views/contact_frontend_data.php:46 views/contact_frontend_data.php:56
+#: views/contact_email_settings.php:36 views/contact_email_settings.php:52
+#: views/contact_frontend_data.php:45 views/contact_frontend_data.php:55
 msgid "Select Form"
 msgstr "フォームを選択"
 
-#: frontend_views/contact_bank_forms.php:344
+#: frontend_views/contact_bank_forms.php:343
 #: views/contact_bank_form_preview.php:395
-#: views/contact_controls_files.php:89
+#: views/contact_controls_files.php:95
 msgid "Select Option"
 msgstr "選択し オプション"
 
@@ -174,14 +175,14 @@ msgid "Label"
 msgstr "ラベル"
 
 #: includes/cb_checkbox.php:61 includes/cb_checkbox.php:163
-#: includes/cb_dropdown.php:61 includes/cb_dropdown.php:163
+#: includes/cb_dropdown.php:61 includes/cb_dropdown.php:164
 #: includes/cb_email.php:62 includes/cb_email.php:152
 #: includes/cb_multiple.php:63 includes/cb_multiple.php:183
 #: includes/cb_text.php:62 includes/cb_text.php:151
 #: includes/cb_textarea.php:61 includes/cb_textarea.php:149
-#: views/contact_controls_files.php:36 views/contact_controls_files.php:52
-#: views/contact_controls_files.php:85 views/contact_controls_files.php:101
-#: views/contact_controls_files.php:118
+#: views/contact_controls_files.php:36 views/contact_controls_files.php:54
+#: views/contact_controls_files.php:91 views/contact_controls_files.php:108
+#: views/contact_controls_files.php:126
 msgid "Untitled"
 msgstr "無題"
 
@@ -221,15 +222,14 @@ msgstr "ツールチップテキスト"
 #: includes/cb_checkbox.php:116 includes/cb_dropdown.php:116
 #: includes/cb_email.php:134 includes/cb_multiple.php:127
 #: includes/cb_text.php:133 includes/cb_textarea.php:132
-#: views/contact_bank_layout_settings.php:946
-#: views/contact_frontend_data.php:171 views/dashboard.php:208
-#: views/includes_common_after.php:349 views/includes_common_after.php:352
-#: views/includes_common_after.php:355 views/includes_common_after.php:358
-#: views/includes_common_after.php:361 views/includes_common_after.php:364
-#: views/includes_common_after.php:367 views/includes_common_after.php:370
-#: views/includes_common_after.php:373
-msgid "This Feature is only available in Paid Premium Edition!"
-msgstr "この機能は支払わプレミアムエディションでのみ使用可能です！"
+#: views/contact_frontend_data.php:176 views/dashboard.php:217
+#: views/includes_common_after.php:442 views/includes_common_after.php:445
+#: views/includes_common_after.php:448 views/includes_common_after.php:451
+#: views/includes_common_after.php:454 views/includes_common_after.php:457
+#: views/includes_common_after.php:460 views/includes_common_after.php:463
+#: views/includes_common_after.php:466
+msgid "This Feature is only available in Premium Editions!"
+msgstr "この機能はプレミアムエディションでのみ利用可能です！"
 
 #: includes/cb_checkbox.php:120 includes/cb_dropdown.php:120
 #: includes/cb_multiple.php:132
@@ -245,41 +245,41 @@ msgstr "オプションを入力し"
 msgid "Add"
 msgstr "加える"
 
-#: includes/cb_checkbox.php:154 includes/cb_dropdown.php:154
+#: includes/cb_checkbox.php:154 includes/cb_dropdown.php:155
 #: includes/cb_multiple.php:172
 msgid "Delete"
 msgstr "削除"
 
-#: includes/cb_checkbox.php:161 includes/cb_dropdown.php:161
+#: includes/cb_checkbox.php:161 includes/cb_dropdown.php:162
 #: includes/cb_email.php:149 includes/cb_multiple.php:179
 #: includes/cb_text.php:148 includes/cb_textarea.php:147
 msgid "Admin Label"
 msgstr "管理者ラベル"
 
-#: includes/cb_checkbox.php:163 includes/cb_dropdown.php:163
+#: includes/cb_checkbox.php:163 includes/cb_dropdown.php:164
 #: includes/cb_email.php:153 includes/cb_multiple.php:182
 #: includes/cb_text.php:150 includes/cb_textarea.php:150
 msgid "Enter Admin Label"
 msgstr "入力します- 管理者ラベル"
 
-#: includes/cb_checkbox.php:167 includes/cb_dropdown.php:167
+#: includes/cb_checkbox.php:167 includes/cb_dropdown.php:168
 #: includes/cb_email.php:158 includes/cb_multiple.php:187
 #: includes/cb_text.php:156 includes/cb_textarea.php:154
 msgid "Do not show in the email"
 msgstr "Eメール-中に 表示されません"
 
-#: includes/cb_checkbox.php:198 includes/cb_dropdown.php:198
+#: includes/cb_checkbox.php:198 includes/cb_dropdown.php:199
 #: includes/cb_email.php:192 includes/cb_multiple.php:221
-#: includes/cb_text.php:219 includes/cb_textarea.php:215
+#: includes/cb_text.php:216 includes/cb_textarea.php:209
 msgid "Save Settings"
 msgstr "保存 [設定]"
 
-#: includes/cb_checkbox.php:247 includes/cb_dropdown.php:238
-#: includes/cb_multiple.php:271
+#: includes/cb_checkbox.php:292 includes/cb_dropdown.php:285
+#: includes/cb_multiple.php:316
 msgid "Please Fill an Option."
 msgstr "オプションを入力してください。"
 
-#: includes/cb_dropdown.php:55 views/contact_view.php:461
+#: includes/cb_dropdown.php:55 views/contact_view.php:458
 msgid "Select Box"
 msgstr "ボックス-を選択"
 
@@ -292,7 +292,7 @@ msgstr "ラベルを入力"
 msgid "Enter Option"
 msgstr "オプション入る"
 
-#: includes/cb_email.php:55 views/contact_view.php:458
+#: includes/cb_email.php:55 views/contact_view.php:455
 msgid "Email Address"
 msgstr "電子メールアドレス"
 
@@ -315,11 +315,11 @@ msgstr "プレースホルダ"
 msgid "Enter Place Holder"
 msgstr "プレースホルダを入力"
 
-#: includes/cb_multiple.php:55 views/contact_view.php:469
+#: includes/cb_multiple.php:55 views/contact_view.php:466
 msgid "Radio Buttons"
 msgstr "のラジオボタン"
 
-#: includes/cb_text.php:55 views/contact_view.php:450
+#: includes/cb_text.php:55 views/contact_view.php:447
 msgid "Single Line Text"
 msgstr "単一行テキスト"
 
@@ -327,36 +327,36 @@ msgstr "単一行テキスト"
 msgid "Add a filter"
 msgstr "フィルタを追加"
 
-#: includes/cb_text.php:192 includes/cb_textarea.php:189
+#: includes/cb_text.php:191 includes/cb_textarea.php:188
 msgid "Alpha"
 msgstr "アルファ"
 
-#: includes/cb_text.php:196 includes/cb_textarea.php:193
+#: includes/cb_text.php:195 includes/cb_textarea.php:191
 msgid "Alpha Numeric"
 msgstr "英数字"
 
-#: includes/cb_text.php:200 includes/cb_textarea.php:197
+#: includes/cb_text.php:199 includes/cb_textarea.php:194
 msgid "Digits"
 msgstr "桁"
 
-#: includes/cb_text.php:204 includes/cb_textarea.php:201
+#: includes/cb_text.php:203 includes/cb_textarea.php:197
 msgid "Strip Tags"
 msgstr "ストリップタグ"
 
-#: includes/cb_text.php:208 includes/cb_textarea.php:205
+#: includes/cb_text.php:207 includes/cb_textarea.php:200
 msgid "Trim"
 msgstr "トリム"
 
-#: includes/cb_text.php:210 includes/cb_textarea.php:207
+#: includes/cb_text.php:209 includes/cb_textarea.php:202
 #: views/contact_bank_layout_settings.php:83
 #: views/contact_bank_layout_settings.php:271
 #: views/contact_bank_layout_settings.php:481
 #: views/contact_bank_layout_settings.php:674
-#: views/contact_bank_layout_settings.php:802 views/contact_view.php:479
-msgid " (Available in Premium Edition)"
+#: views/contact_bank_layout_settings.php:802 views/contact_view.php:476
+msgid " (Available in Premium Editions)"
 msgstr "（プレミアムエディションで利用可能）"
 
-#: includes/cb_textarea.php:55 views/contact_view.php:453
+#: includes/cb_textarea.php:55 views/contact_view.php:450
 msgid "Paragraph Text"
 msgstr "段落テキスト"
 
@@ -386,187 +386,121 @@ msgstr "電子メール設定を削除し。"
 msgid "Delete Form Entry"
 msgstr "削除 フォーム-エントリ"
 
-#: lib/install-script.php:238
-msgid "blank_field_message"
-msgstr "空白フィールドメッセージ"
-
-#: lib/install-script.php:239 lib/install-script.php:666
-#: views/contact_view.php:305
-msgid "Required field must not be blank"
-msgstr "必要なフィールド -であってはならない,ブランク"
-
-#: lib/install-script.php:248
-msgid "incorrect_email_message"
-msgstr "不正な電子メールメッセージ"
-
-#: lib/install-script.php:249 lib/install-script.php:676
-#: views/contact_view.php:317
-msgid "Please enter a valid email address"
-msgstr "有効なメールアドレスを入力してください"
-
-#: lib/install-script.php:539 lib/install-script.php:918
-msgid "Submit"
-msgstr "提出する"
-
-#: lib/install-script.php:626
-msgid "Contact Form Demo"
-msgstr "お問い合わせフォームデモ"
-
-#: lib/install-script.php:656
-msgid "Your message was sent successfully. Thanks."
-msgstr "メッセージが正常に送信されました。ありがとう。"
-
-#: lib/install-script.php:710 lib/install-script.php:714
-#: lib/install-script.php:715
-msgid "Your Name"
-msgstr "あなたの名前"
-
-#: lib/install-script.php:761 lib/install-script.php:765
-#: lib/install-script.php:766
-msgid "Your Email"
-msgstr "あなたのEメール"
-
-#: lib/install-script.php:807 lib/install-script.php:811
-#: lib/install-script.php:812 views/add_contact_email.php:202
-msgid "Subject"
-msgstr "件名"
-
-#: lib/install-script.php:860 lib/install-script.php:864
-#: lib/install-script.php:865
-msgid "Your Message"
-msgstr "あなたのメッセージ"
-
-#: lib/install-script.php:992
-msgid "Admin Notification"
-msgstr "管理者 通知が"
-
-#: lib/install-script.php:995 lib/install-script.php:1022
-msgid "Site Administration"
-msgstr "サイト 投与"
-
-#: lib/install-script.php:997
-msgid "New Contact recieved from Website"
-msgstr "新しい連絡先はウェブサイトから受け取っ"
-
-#: lib/install-script.php:1020
-msgid "Client Notification"
-msgstr "クライアントの通知"
-
-#: lib/install-script.php:1021
-msgid "Thanks for visiting our website"
-msgstr "当社のウェブサイトを訪問してくれてありがとう"
-
-#: views/add_contact_email.php:50 views/contact_email_settings.php:88
+#: views/add_contact_email.php:69 views/contact_email_settings.php:87
 msgid "Email Confirmation"
 msgstr "Eメール確認"
 
-#: views/add_contact_email.php:53
+#: views/add_contact_email.php:72
 msgid "Back to Email Settings"
 msgstr "電子メール設定戻るへ"
 
-#: views/add_contact_email.php:54 views/add_contact_email.php:234
+#: views/add_contact_email.php:73 views/add_contact_email.php:415
 #: views/contact_bank_layout_settings.php:35
 #: views/contact_bank_layout_settings.php:520
 #: views/contact_bank_layout_settings.php:932
 msgid "Save"
 msgstr "保存"
 
-#: views/add_contact_email.php:58
+#: views/add_contact_email.php:77
 msgid "Email Settings Saved. Kindly wait for the redirect."
 msgstr "電子メール設定が保存されます。親切に 待ち ための- リダイレクト。"
 
-#: views/add_contact_email.php:65 views/add_contact_email.php:122
-#: views/contact_controls_files.php:68
+#: views/add_contact_email.php:84 views/add_contact_email.php:141
+#: views/contact_controls_files.php:72
 msgid "Email"
 msgstr "Eメール"
 
-#: views/add_contact_email.php:69 views/contact-feedback.php:51
-#: views/contact_view.php:486
+#: views/add_contact_email.php:88 views/contact-feedback.php:51
+#: views/contact_view.php:483
 msgid "Name"
 msgstr "名前"
 
-#: views/add_contact_email.php:73
+#: views/add_contact_email.php:92
 msgid "Enter Name"
 msgstr "入る-名"
 
-#: views/add_contact_email.php:79
+#: views/add_contact_email.php:98
 msgid "Send To"
 msgstr "に送信"
 
-#: views/add_contact_email.php:88 views/add_contact_email.php:99
-#: views/add_contact_email.php:111 views/add_contact_email.php:171
+#: views/add_contact_email.php:107 views/add_contact_email.php:118
+#: views/add_contact_email.php:130 views/add_contact_email.php:250
 msgid "Enter Email"
 msgstr "Eメールを入力"
 
-#: views/add_contact_email.php:90 views/add_contact_email.php:101
-#: views/add_contact_email.php:113
+#: views/add_contact_email.php:109 views/add_contact_email.php:120
+#: views/add_contact_email.php:132
 msgid "Select a Field"
 msgstr "フィールドを選択"
 
-#: views/add_contact_email.php:126
+#: views/add_contact_email.php:145
 msgid "Enter Email "
 msgstr "Eメールを入力"
 
-#: views/add_contact_email.php:130
+#: views/add_contact_email.php:149
 msgid "Send To Field"
 msgstr "に送信フィールド"
 
-#: views/add_contact_email.php:134
+#: views/add_contact_email.php:153
 msgid "Enter Field "
 msgstr "フィールド入る"
 
-#: views/add_contact_email.php:136 views/add_contact_email.php:149
-#: views/add_contact_email.php:162 views/add_contact_email.php:173
-#: views/add_contact_email.php:184 views/add_contact_email.php:195
-#: views/add_contact_email.php:208
+#: views/add_contact_email.php:155 views/add_contact_email.php:188
+#: views/add_contact_email.php:221 views/add_contact_email.php:252
+#: views/add_contact_email.php:283 views/add_contact_email.php:314
+#: views/add_contact_email.php:347
 msgid "Select a field"
 msgstr "フィールドを選択"
 
-#: views/add_contact_email.php:143
+#: views/add_contact_email.php:182
 msgid "From Name"
 msgstr "名から"
 
-#: views/add_contact_email.php:147
+#: views/add_contact_email.php:186
 msgid "Enter from name "
 msgstr "入る,名から"
 
-#: views/add_contact_email.php:156
+#: views/add_contact_email.php:215
 msgid "From Email"
 msgstr "から,Eメール"
 
-#: views/add_contact_email.php:160
+#: views/add_contact_email.php:219
 msgid "Enter from email"
 msgstr "入る,Eメールから"
 
-#: views/add_contact_email.php:169
+#: views/add_contact_email.php:248
 msgid "Reply To"
 msgstr "に返信"
 
-#: views/add_contact_email.php:180
+#: views/add_contact_email.php:279
 msgid "CC"
 msgstr "CC"
 
-#: views/add_contact_email.php:182
+#: views/add_contact_email.php:281
 msgid "Enter CC Email "
 msgstr "CC Eメール入る"
 
-#: views/add_contact_email.php:191
+#: views/add_contact_email.php:310
 msgid "BCC"
 msgstr "BCC"
 
-#: views/add_contact_email.php:193
+#: views/add_contact_email.php:312
 msgid "Enter Bcc Email"
 msgstr "BCC Eメール入る"
 
-#: views/add_contact_email.php:206
+#: views/add_contact_email.php:341
+msgid "Subject"
+msgstr "件名"
+
+#: views/add_contact_email.php:345
 msgid "Enter Subject"
 msgstr "件名入る"
 
-#: views/add_contact_email.php:215
+#: views/add_contact_email.php:374
 msgid "Message"
 msgstr "メッセージ"
 
-#: views/add_contact_email.php:225
+#: views/add_contact_email.php:386
 msgid "Insert a Field into Your Form Message"
 msgstr "フォームメッセージにフィールドを挿入する"
 
@@ -586,20 +520,16 @@ msgstr "システムレポートを取得"
 msgid "Close System Report"
 msgstr "システムレポート-閉じる"
 
-#: views/contact-bank-system-report.php:125
-msgid "Default"
-msgstr "デフォルト"
-
 #: views/contact-feedback.php:36 views/contact_bank_form_preview.php:297
 #: views/contact_bank_layout_settings.php:32
-#: views/contact_email_settings.php:33 views/contact_frontend_data.php:34
-#: views/contact_view.php:262
+#: views/contact_email_settings.php:32 views/contact_frontend_data.php:33
+#: views/contact_view.php:259 views/purchase_pro_version.php:36
 msgid "Back to Dashboard"
 msgstr "ダッシュボードバックへ"
 
 #: views/contact-feedback.php:40
-msgid "Email has beens send successfully."
-msgstr "メールは正常に送信されました。"
+msgid "Email has been sent successfully."
+msgstr "メールが正常に送信されました。"
 
 #: views/contact-feedback.php:47 views/contact-feedback.php:63
 msgid "Feature Requests / Suggestions"
@@ -628,10 +558,6 @@ msgstr "送信する"
 #: views/contact_bank_form_preview.php:294 views/dashboard.php:129
 msgid "Form Preview"
 msgstr "フォームプレビュー"
-
-#: views/contact_bank_layout_settings.php:29
-msgid " (Premium Features available in Paid Edition)"
-msgstr "（支払わ版で利用可能なプレミアム機能）"
 
 #: views/contact_bank_layout_settings.php:33
 msgid "Restore Global Settings"
@@ -785,6 +711,10 @@ msgstr "成功メッセージ設定"
 msgid "Error Message Settings"
 msgstr "誤差メッセージ設定"
 
+#: views/contact_bank_layout_settings.php:947
+msgid "These Features are only available in Premium Editions!"
+msgstr "この機能はプレミアムエディションでのみ利用可能です！"
+
 #: views/contact_bank_pro_version.php:44
 msgid "Contact Bank Pricing"
 msgstr "ContactBankプライシング"
@@ -801,168 +731,176 @@ msgstr "連絡を取っことができます！"
 msgid "Order Now!"
 msgstr "今注文！"
 
-#: views/contact_controls_files.php:41 views/contact_controls_files.php:57
-#: views/contact_controls_files.php:74 views/contact_controls_files.php:92
-#: views/contact_controls_files.php:108 views/contact_controls_files.php:125
+#: views/contact_controls_files.php:41 views/contact_controls_files.php:59
+#: views/contact_controls_files.php:78 views/contact_controls_files.php:98
+#: views/contact_controls_files.php:115 views/contact_controls_files.php:133
 msgid "Settings"
 msgstr "[設定]"
 
-#: views/contact_documentation.php:27
+#: views/contact_documentation.php:26
 msgid "Documentation - Contact Bank"
 msgstr "ドキュメンテーション - お問い合わせバンク"
 
-#: views/contact_email_settings.php:78
+#: views/contact_email_settings.php:77
 msgid "Add New"
 msgstr "新規追加"
 
-#: views/contact_email_settings.php:159
+#: views/contact_email_settings.php:161
 msgid "Are you sure, you want to delete this Email Setting?"
 msgstr "このEメール設定を削除しますか？"
 
-#: views/contact_email_settings.php:177 views/contact_frontend_data.php:138
+#: views/contact_email_settings.php:182 views/contact_frontend_data.php:138
 msgid "Please select the Form first."
 msgstr "フォームを最初に選択してください。"
 
-#: views/contact_frontend_data.php:35
+#: views/contact_frontend_data.php:34
 msgid "Export to Excel"
 msgstr "Excelへのエクスポート"
 
-#: views/contact_frontend_data.php:41 views/dashboard.php:64
+#: views/contact_frontend_data.php:40 views/dashboard.php:64
 #: views/dashboard.php:71
 msgid "Form"
 msgstr "フォーム"
 
-#: views/contact_view.php:259 views/dashboard.php:46
+#: views/contact_view.php:256 views/dashboard.php:46
 msgid "Add New Form"
 msgstr "新しいフォームを 追加し"
 
-#: views/contact_view.php:265 views/contact_view.php:529
+#: views/contact_view.php:262 views/contact_view.php:525
 msgid "Save Form"
 msgstr "フォームを保存し"
 
-#: views/contact_view.php:270
+#: views/contact_view.php:267
 msgid "Form Submitted. Kindly wait for the redirect."
 msgstr "フォームサブミット済み。親切に 待ち ための- リダイレクト。"
 
-#: views/contact_view.php:279
+#: views/contact_view.php:276
 msgid "Form Settings"
 msgstr "フォーム設定"
 
-#: views/contact_view.php:283
+#: views/contact_view.php:280
 msgid "Form Name :"
 msgstr "フォーム名："
 
-#: views/contact_view.php:289
+#: views/contact_view.php:286
 msgid "Enter Form Name"
 msgstr "フォーム名-入る："
 
-#: views/contact_view.php:293
+#: views/contact_view.php:290
 msgid "Form Description :"
 msgstr "フォームの説明："
 
-#: views/contact_view.php:295
+#: views/contact_view.php:292
 msgid "Enter Form Description"
 msgstr "フォームの説明を入力します。"
 
-#: views/contact_view.php:299
+#: views/contact_view.php:296
 msgid "Blank Field Message:"
 msgstr " 空欄  フィールド-メッセージ："
 
-#: views/contact_view.php:307
+#: views/contact_view.php:302
+msgid "Required field must not be blank"
+msgstr "必要なフィールド -であってはならない,ブランク"
+
+#: views/contact_view.php:304
 msgid "Enter Blank Field Message"
 msgstr "入る, 空欄  フィールド-メッセージ："
 
-#: views/contact_view.php:311
+#: views/contact_view.php:308
 msgid "Incorrect Email Message:"
 msgstr "電子メールメッセージ正しくない："
 
-#: views/contact_view.php:319
+#: views/contact_view.php:314
+msgid "Please enter a valid email address"
+msgstr "有効なメールアドレスを入力してください"
+
+#: views/contact_view.php:316
 msgid "Enter Incorrect Email Message"
 msgstr "入る-電子メールメッセージ正しくない ："
 
-#: views/contact_view.php:323
+#: views/contact_view.php:320
 msgid "Success Message :"
 msgstr "成功メッセージ："
 
-#: views/contact_view.php:327
+#: views/contact_view.php:324
 msgid "Enter Success Message"
 msgstr "成功メッセージ 入る："
 
-#: views/contact_view.php:331
+#: views/contact_view.php:328
 msgid "Redirect :"
 msgstr "リダイレクト："
 
-#: views/contact_view.php:343 views/contact_view.php:354
-#: views/contact_view.php:366
+#: views/contact_view.php:340 views/contact_view.php:351
+#: views/contact_view.php:363
 msgid "Page"
 msgstr "ページ"
 
-#: views/contact_view.php:346 views/contact_view.php:357
-#: views/contact_view.php:369
+#: views/contact_view.php:343 views/contact_view.php:354
+#: views/contact_view.php:366
 msgid "URL"
 msgstr "URL"
 
-#: views/contact_view.php:376
+#: views/contact_view.php:373
 msgid "Page :"
 msgstr "ページ："
 
-#: views/contact_view.php:419
+#: views/contact_view.php:416
 msgid "URL :"
 msgstr "URL :"
 
-#: views/contact_view.php:426
+#: views/contact_view.php:423
 msgid "Enter Redirect URL"
 msgstr "リダイレクトURLを,入力し"
 
-#: views/contact_view.php:433
+#: views/contact_view.php:430
 msgid "Form Layout Preview"
 msgstr "フォームレイアウトプレビュー"
 
-#: views/contact_view.php:444
+#: views/contact_view.php:441
 msgid "Standard Fields"
 msgstr "標準フィールド"
 
-#: views/contact_view.php:447 views/contact_view.php:483
+#: views/contact_view.php:444 views/contact_view.php:480
 msgid "Click on a field to use into your form."
 msgstr " フォームあなたで 使用する フィールドをクリック"
 
-#: views/contact_view.php:466
+#: views/contact_view.php:463
 msgid "Checkboxes"
 msgstr "チェックボックス"
 
-#: views/contact_view.php:478
+#: views/contact_view.php:475
 msgid "Advanced Fields"
 msgstr "詳細設定フィールド"
 
-#: views/contact_view.php:489
+#: views/contact_view.php:486
 msgid "Website / URL"
 msgstr "ウェブサイト/ URL"
 
-#: views/contact_view.php:494
+#: views/contact_view.php:491
 msgid "Phone"
 msgstr "電話"
 
-#: views/contact_view.php:497
+#: views/contact_view.php:494
 msgid "Address"
 msgstr "アドレス"
 
-#: views/contact_view.php:502
+#: views/contact_view.php:499
 msgid "Number"
 msgstr "数"
 
-#: views/contact_view.php:505
+#: views/contact_view.php:502
 msgid "File Upload"
 msgstr "ファイルアップロード"
 
-#: views/contact_view.php:510
+#: views/contact_view.php:507
 msgid "Date"
 msgstr "日付"
 
-#: views/contact_view.php:513
+#: views/contact_view.php:510
 msgid "Time"
 msgstr "時間"
 
-#: views/contact_view.php:518
+#: views/contact_view.php:515
 msgid "Password"
 msgstr "パスワード"
 
@@ -994,11 +932,11 @@ msgstr "編集フォーム"
 msgid "Delete Form"
 msgstr "フォームを削除"
 
-#: views/dashboard.php:189
+#: views/dashboard.php:192
 msgid "Are you sure, you want to delete this Form?"
 msgstr "あなたはこのフォームを削除しますか？"
 
-#: views/dashboard.php:199
+#: views/dashboard.php:205
 msgid "Are you sure, you want to delete all Forms?"
 msgstr "すべてのフォームを削除しますか？"
 
@@ -1027,8 +965,8 @@ msgid "Online Demos"
 msgstr "オンラインデモ"
 
 #: views/header.php:48
-msgid "Premium Pricing Plan ?"
-msgstr "プレミアム価格プラン？"
+msgid "Pricing Plans"
+msgstr "料金プラン"
 
 #: views/header.php:55
 msgid "Knowledge Base"
@@ -1043,8 +981,8 @@ msgid "FAQ's"
 msgstr "よくある質問"
 
 #: views/header.php:70
-msgid "Detailed Features"
-msgstr "詳細な特徴"
+msgid "Renew Premium Support"
+msgstr "ヘルプをサポートが必要ですか？"
 
 #: views/header.php:76
 msgid "More Actions"
@@ -1054,12 +992,76 @@ msgstr "アクション"
 msgid "Plugin Customization"
 msgstr "プラグインカスタマイズ·"
 
+#: views/purchase_pro_version.php:41
+msgid "WP Contact Bank is an one time Investment. Its Worth it!"
+msgstr "WP連絡先銀行は1時間の投資です。価値があります！"
+
 #: views/shortcode.php:29
 msgid ""
 "How to setup Short-Codes for Contact Bank into your WordPress Page/Post?"
 msgstr ""
 "どのようにあなたのワードプレスのページ/ポストへのContactBankのためセットアッ"
 "プ短·コードに？"
+
+#~ msgid "Email has beens send successfully."
+#~ msgstr "メールは正常に送信されました。"
+
+#~ msgid "This Feature is only available in Paid Premium Edition!"
+#~ msgstr "この機能は支払わプレミアムエディションでのみ使用可能です！"
+
+#~ msgid " (Available in Premium Edition)"
+#~ msgstr "（プレミアムエディションで利用可能）"
+
+#~ msgid "blank_field_message"
+#~ msgstr "空白フィールドメッセージ"
+
+#~ msgid "incorrect_email_message"
+#~ msgstr "不正な電子メールメッセージ"
+
+#~ msgid "Submit"
+#~ msgstr "提出する"
+
+#~ msgid "Contact Form Demo"
+#~ msgstr "お問い合わせフォームデモ"
+
+#~ msgid "Your message was sent successfully. Thanks."
+#~ msgstr "メッセージが正常に送信されました。ありがとう。"
+
+#~ msgid "Your Name"
+#~ msgstr "あなたの名前"
+
+#~ msgid "Your Email"
+#~ msgstr "あなたのEメール"
+
+#~ msgid "Your Message"
+#~ msgstr "あなたのメッセージ"
+
+#~ msgid "Admin Notification"
+#~ msgstr "管理者 通知が"
+
+#~ msgid "Site Administration"
+#~ msgstr "サイト 投与"
+
+#~ msgid "New Contact recieved from Website"
+#~ msgstr "新しい連絡先はウェブサイトから受け取っ"
+
+#~ msgid "Client Notification"
+#~ msgstr "クライアントの通知"
+
+#~ msgid "Thanks for visiting our website"
+#~ msgstr "当社のウェブサイトを訪問してくれてありがとう"
+
+#~ msgid "Default"
+#~ msgstr "デフォルト"
+
+#~ msgid " (Premium Features available in Paid Edition)"
+#~ msgstr "（支払わ版で利用可能なプレミアム機能）"
+
+#~ msgid "Premium Pricing Plan ?"
+#~ msgstr "プレミアム価格プラン？"
+
+#~ msgid "Detailed Features"
+#~ msgstr "詳細な特徴"
 
 #~ msgid "Roles & Capabilities"
 #~ msgstr "ケーパビリティ役割と "

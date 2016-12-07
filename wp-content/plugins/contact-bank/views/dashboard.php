@@ -1,4 +1,5 @@
 <?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -10,7 +11,7 @@ switch($cb_role)
 	case "author":
 		$cb_user_role_permission = "publish_posts";
 		break;
-	
+
 }
 if (!current_user_can($cb_user_role_permission))
 {
@@ -81,13 +82,13 @@ else
 														(
 															"SELECT * FROM " . contact_bank_contact_form()
 														);
-														for ($flag = 0; $flag < count($form_data); $flag++) 
+														for ($flag = 0; $flag < count($form_data); $flag++)
 														{
 															$total_control = $wpdb->get_var
 															(
 																$wpdb->prepare
 																(
-																	" SELECT count(" . contact_bank_contact_form() . ".form_id) FROM " . contact_bank_contact_form() . " JOIN ". create_control_Table() . " ON " . create_control_Table() .".form_id = ".contact_bank_contact_form(). 
+																	" SELECT count(" . contact_bank_contact_form() . ".form_id) FROM " . contact_bank_contact_form() . " JOIN ". create_control_Table() . " ON " . create_control_Table() .".form_id = ".contact_bank_contact_form().
 																	".form_id WHERE " . contact_bank_contact_form() . ".form_id = %d",
 																	$form_data[$flag]->form_id
 																)
@@ -107,34 +108,34 @@ else
 																	<a href="admin.php?page=contact_bank&form_id=<?php echo $form_data[$flag]->form_id; ?>"
 																					class="btn hovertip"
 																					data-original-title="<?php _e("Edit Form", contact_bank) ?>">
-																					<i class="icon-pencil"></i>
+																					<i class="icon-custom-pencil"></i>
 																	</a>
 																	<a href="admin.php?page=contact_layout_settings&form_id=<?php echo $form_data[$flag]->form_id; ?>"
 																		class="btn hovertip"
 																		data-original-title="<?php _e("Global Settings", contact_bank) ?>">
-																		<i class="icon-wrench"></i>
+																		<i class="icon-custom-wrench"></i>
 																	</a>
 																	<a href="admin.php?page=contact_email&form_id=<?php echo $form_data[$flag]->form_id; ?>"
 																		class="btn hovertip"
 																		data-original-title="<?php _e("Email Settings", contact_bank) ?>">
-																		<i class="icon-envelope"></i>
+																		<i class="icon-custom-envelope"></i>
 																	</a>
 																	<a href="admin.php?page=contact_frontend_data&form_id=<?php echo $form_data[$flag]->form_id; ?>"
 																		class="btn hovertip"
 																		data-original-title="<?php _e("Form Entries", contact_bank) ?>">
-																		<i class="icon-tasks"></i>
+																		<i class="icon-custom-grid"></i>
 																	</a>
 																	<a href="admin.php?page=form_preview&form_id=<?php echo $form_data[$flag]->form_id; ?>"
 																		class="btn hovertip"
 																		data-original-title="<?php _e("Form Preview", contact_bank) ?>">
-																		<i class="icon-eye-open"></i>
+																		<i class="icon-custom-eye"></i>
 																	</a>
 																	<a herf="#" onclick="delete_form(<?php echo $form_data[$flag]->form_id; ?>);"
 																	class="btn hovertip"
 																	data-original-title="<?php _e("Delete Form", contact_bank) ?>">
-																	<i class="icon-trash"></i>
+																	<i class="icon-custom-trash"></i>
 																	</a>
-																	
+
 																</td>
 															</tr>
 														<?php
@@ -155,19 +156,17 @@ else
 		</div>
 	</form>
 	<script type="text/javascript">
-		
 		jQuery(document).ready(function()
 		{
-
 			jQuery("a[rel^=\"prettyPhoto\"]").prettyPhoto
 			({
-				animation_speed: 1000, 
-				slideshow: 4000, 
+				animation_speed: 1000,
+				slideshow: 4000,
 				autoplay_slideshow: false,
-				opacity: 0.80, 
+				opacity: 0.80,
 				show_title: false,
 				allow_resize: true
-			});	
+			});
 		});
 		oTable = jQuery("#data-table-form").dataTable
 		({
@@ -185,36 +184,49 @@ else
 				{ "bSortable": false, "aTargets": [2] }
 			]
 		});
-		function delete_form(form_Id) {
-			var check_str = confirm("<?php _e( "Are you sure, you want to delete this Form?", contact_bank ); ?>");
-			if (check_str == true)
-			{
-				jQuery.post(ajaxurl, "id=" + form_Id + "&param=delete_form&action=add_contact_form_library", function (data)
-				{
-					location.reload();
-				});
-			}
-		}
-		function delete_forms() {
-			var checkstr = confirm("<?php _e( "Are you sure, you want to delete all Forms?", contact_bank ); ?>");
-			if (checkstr == true) 
-			{
-				jQuery.post(ajaxurl, "param=delete_forms&action=add_contact_form_library", function (data) {
-				location.reload();
-				});
-			}
-		}
-		function restore_factory_settings() {
-			alert("<?php _e("This Feature is only available in Paid Premium Edition!", contact_bank ); ?>");
-		}
-		function close_popup()
+		if (typeof(delete_form) != "function")
 		{
-			jQuery( "#contact_bank_popup" ).dialog( "close" );
-			jQuery.post(ajaxurl, "param=update_option&action=add_new_album_library", function()
+			function delete_form(form_Id)
 			{
-			}); 
+				var check_str = confirm("<?php _e( "Are you sure, you want to delete this Form?", contact_bank ); ?>");
+				if (check_str == true)
+				{
+					jQuery.post(ajaxurl, "id=" + form_Id + "&param=delete_form&action=add_contact_form_library", function (data)
+					{
+						location.reload();
+					});
+				}
+			}
+		}
+		if (typeof(delete_forms) != "function")
+		{
+			function delete_forms() {
+				var checkstr = confirm("<?php _e( "Are you sure, you want to delete all Forms?", contact_bank ); ?>");
+				if (checkstr == true)
+				{
+					jQuery.post(ajaxurl, "param=delete_forms&action=add_contact_form_library", function (data) {
+					location.reload();
+					});
+				}
+			}
+		}
+		if (typeof(restore_factory_settings) != "function")
+		{
+			function restore_factory_settings() {
+				alert("<?php _e("This Feature is only available in Premium Editions!", contact_bank ); ?>");
+			}
+		}
+		if (typeof(close_popup) != "function")
+		{
+			function close_popup()
+			{
+				jQuery( "#contact_bank_popup" ).dialog( "close" );
+				jQuery.post(ajaxurl, "param=update_option&action=add_new_album_library", function()
+				{
+				});
+			}
 		}
 	</script>
-<?php 
+<?php
 }
 ?>

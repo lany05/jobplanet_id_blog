@@ -1,4 +1,5 @@
-<?php 
+<?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -41,7 +42,7 @@ else
 											<?php _e("WP Contact Bank is an one time Investment. Its Worth it!", contact_bank); ?>
 										</h1>
 										<div id="contact_bank_pricing"
-											class="p_table_responsive p_table_hide_caption_column p_table_1 p_table_1_1 css3_grid_clearfix">
+											class="p_table_responsive p_table_hide_caption_column p_table_1 p_table_1_1 css3_grid_clearfix p_table_hover_disabled">
 											<div class="caption_column column_0_responsive"
 												style="width: 20%;">
 												<ul>
@@ -468,7 +469,7 @@ else
 																class="css3_grid_tooltip"><span>You just need to pay for
 																		once for life time.</span>
 																<h1 class="col1">
-																		&pound;<span>17</span>
+																		$<span>26</span>
 																	</h1>
 																	<h3 class="col1">one time</h3></span></span></span></li>
 													<li
@@ -658,7 +659,7 @@ else
 																class="sign_up sign_up_orange radius3">Order Now!</a></span></span></li>
 												</ul>
 											</div>
-											<div class="column_3 active_column column_3_responsive"
+											<div class="column_3 column_3_responsive"
 												style="width: 16%;">
 												<div class="column_ribbon ribbon_style2_best"></div>
 												<ul>
@@ -673,7 +674,7 @@ else
 																class="css3_grid_tooltip"><span>You just need to pay for
 																		once for life time.</span>
 																<h1 class="col1">
-																		&pound;<span>22</span>
+																		$<span>33</span>
 																	</h1>
 																	<h3 class="col1">one time</h3></span></span></span></li>
 													<li
@@ -877,7 +878,7 @@ else
 																class="css3_grid_tooltip"><span>You just need to pay for
 																		once for life time.</span>
 																<h1 class="col1">
-																		&pound;<span>66</span>
+																		$<span>99</span>
 																	</h1>
 																	<h3 class="col1">one time</h3></span></span></span></li>
 													<li
@@ -1081,7 +1082,7 @@ else
 																class="css3_grid_tooltip"><span>You just need to pay for
 																		once for life time.</span>
 																<h1 class="col1">
-																		&pound;<span>577</span>
+																		$<span>866</span>
 																	</h1>
 																	<h3 class="col1">one time</h3></span></span></span></li>
 													<li
@@ -1274,10 +1275,8 @@ else
 										</div>
 									</div>
 								</div>
-								<div class="wpb_text_column wpb_content_element ">
-									<div class="wpb_wrapper">
-										<strong><span style="text-decoration: underline;">NOTE FOR MULTISITE*</span> :</strong>   Allows you to use this Plugin with network of sites / Multisites WordPress. But you need to purchase separate license for each Installation / Instance.
-									</div> 
+								<div class="layout-control-group">
+									<strong><span style="text-decoration: underline;">NOTE FOR MULTISITE*</span> :</strong> Allows you to use this Plugin with network of sites / Multisites WordPress. But you need to purchase separate license for each Installation / Instance.
 								</div>
 							</div>
 						</div>

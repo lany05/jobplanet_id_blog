@@ -1,4 +1,5 @@
 <?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 global $wpdb,$current_user,$cb_user_role_permission;
 if (is_super_admin())
 {
@@ -41,10 +42,12 @@ else
 			<?php _e("Settings", contact_bank); ?>
 		</a>
 		<a style="cursor:pointer;" id="anchor_del_">
-			<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png" , dirname(__FILE__));?>"/>
+			<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png",dirname(__FILE__)); ?>" />
 		</a>
 		<br/>
 		<span class="span-description" id="txt_description_"></span>
+		<div id="ux_text_control_tooltip_"></div>
+		<div id="ux_text_control_placeholder_"></div>
 	</div>
 </div>
 <div class="layout-control-group div_border" id="div_2_2" style="display: none;">
@@ -57,16 +60,18 @@ else
 			<?php _e("Settings", contact_bank); ?>
 		</a>
 		<a style="cursor:pointer;" id="anchor_del_">
-			<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png" , dirname(__FILE__));?>"/>
+			<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png",dirname(__FILE__)); ?>"/>
 		</a>
 		<br/>
 		<span class="span-description" id="txt_description_"></span>
+		<div id="ux_txtarea_control_tooltip"></div>
+		<div id="ux_txtarea_control_placeholder"></div>
 	</div>
 </div>
 <div class="layout-control-group div_border" id="div_3_3" style="display: none;">
 	<label class="layout-control-label" id="control_label_">
 		<?php _e("Email", contact_bank); ?> :
-		<span id="txt_required_" class="error">*</span>
+		<span id="txt_required_" class="error_field">*</span>
 	</label>
 	<div class="layout-controls hovertip" id="show_tooltip">
 		<input type="text" class="layout-span7" id="ux_txt_email_" name="ux_txt_email_"/>
@@ -74,10 +79,12 @@ else
 			<?php _e("Settings", contact_bank); ?>
 		</a>
 		<a style="cursor:pointer;" id="anchor_del_">
-			<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png" , dirname(__FILE__));?>"/>
+			<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png",dirname(__FILE__)); ?>" />
 		</a>
 		<br/>
 		<span class="span-description" id="txt_description_"></span>
+		<div id="ux_email_control_tooltip_"></div>
+		<div id="ux_email_control_placeholder_"></div>
 	</div>
 </div>
 <div class="layout-control-group div_border" id="div_4_4" style="display: none;">
@@ -92,8 +99,9 @@ else
 			<?php _e("Settings", contact_bank); ?>
 		</a>
 		<a style="cursor:pointer;" id="anchor_del_">
-			<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png" , dirname(__FILE__));?>"/>
+			<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png",dirname(__FILE__)); ?> "/>
 		</a>
+		<div id="ux_ddl_control_tooltip_"></div>
 	</div>
 </div>
 <div class="layout-control-group div_border" id="div_5_5" style="display: none;">
@@ -108,8 +116,9 @@ else
 				<?php _e("Settings", contact_bank); ?>
 			</a>
 			<a style="cursor:pointer;" id="anchor_del_">
-				<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png" , dirname(__FILE__));?>"/>
+				<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png",dirname(__FILE__)); ?>"/>
 			</a>
+			<div id="ux_chk_control_tooltip_"></div>
 		</div>
 	</div>
 </div>
@@ -125,11 +134,12 @@ else
 				<?php _e("Settings", contact_bank); ?>
 			</a>
 			<a style="cursor:pointer;" id="anchor_del_">
-				<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png" , dirname(__FILE__));?>"/>
+				<img class="delete_control" src="<?php echo plugins_url("/assets/images/delete-bg.png",dirname(__FILE__)); ?>"/>
 			</a>
+			<div id="ux_rdl_control_tooltip_"></div>
 		</div>
 	</div>
 </div>
-<?php 
+<?php
 }
 ?>

@@ -1,18 +1,18 @@
 <?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
+switch($cb_role)
+{
+	case "administrator":
+		$cb_user_role_permission = "manage_options";
+	break;
+	case "editor":
+		$cb_user_role_permission = "publish_pages";
+	break;
+	case "author":
+		$cb_user_role_permission = "publish_posts";
+	break;
 
-	switch($cb_role)
-	{
-		case "administrator":
-			$cb_user_role_permission = "manage_options";
-		break;
-		case "editor":
-			$cb_user_role_permission = "publish_pages";
-		break;
-		case "author":
-			$cb_user_role_permission = "publish_posts";
-		break;
-		
-	}
+}
 if (!current_user_can($cb_user_role_permission))
 {
 	return;
@@ -21,9 +21,9 @@ else
 {
 	if(isset($_REQUEST["param"]))
 	{
-		if($_REQUEST["param"] == "fetch_control_values")
+		if(esc_attr($_REQUEST["param"]) == "fetch_control_values")
 		{
-			$form_id = intval($_REQUEST["form_id"]);
+			$form_id = isset($_REQUEST["form_id"]) ? intval($_REQUEST["form_id"]) : 0;
 			$layout_settings = array();
 			$form_settings_controls = $wpdb->get_results
 			(
@@ -40,8 +40,7 @@ else
 			echo json_encode($layout_settings);
 			die();
 		}
-		
+
 	}
-	
+
 }
-	

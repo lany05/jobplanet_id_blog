@@ -20,19 +20,19 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'blog');
+define('DB_NAME', 'wordpress');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'wordpress');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'sldlfmadlahsl');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'kuning-mysql.cja4chtizcyn.ap-southeast-1.rds.amazonaws.com');
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8mb4');
+define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
@@ -46,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '0oy&S(PZ-0!-/efXcR<M?+S0?S0OBOHFUJSu6eciLw-r$ZQ:H{>1f=fwH_CLKrW<');
-define('SECURE_AUTH_KEY',  'p,J&9LV5ggvTD=fwfm!~{c-*(( 6`#lKekUE?WrDSP?wrF/}c0@*nYj3YQTa+x;~');
-define('LOGGED_IN_KEY',    'uL}z^/)u6t&TWLTBII7+#yfB+H>oHUOocZ1fd&Wv]x5f!|/Y4FK$_sQ.*u?-n%Hh');
-define('NONCE_KEY',        '-)ddMP+Sg8[DRN`b*4C7-fv4#ji#ea^>DJ[NIu7E#Jf$+~I -%Xqy&Q<;=)`s0K.');
-define('AUTH_SALT',        ':s^-<Ysc}J)vw/K~{=^fhyMp5+v=$RzSnMc!Zi-qE-JVg43etlt+:32Qt3,r#$Cm');
-define('SECURE_AUTH_SALT', 'dO-iWSd8zjW9+z<R<^x6f.[}Rr:`-$6b$B:-{*sBS%h)+b55v[B@QSd{ZM0eZI?#');
-define('LOGGED_IN_SALT',   '4``.7Q`M=x$%vg)3@|x#tt-9ls+)T)og(lJ-;J,W^.l,xRTHT}H^j~R>(sRP[*(Y');
-define('NONCE_SALT',       '-$>wUimB|-9)?^jFPhT[yXu g642R4Ll+/VB*|0[`(W.c4L7+z_GY9Ruy6+!h:x%');
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
 
 /**#@-*/
 
@@ -87,3 +87,6 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+define('WP_HOME','http://blog.id.jobplanet.com');
+define('WP_SITEURL','http://blog.id.jobplanet.com');

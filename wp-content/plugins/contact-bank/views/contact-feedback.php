@@ -1,4 +1,5 @@
 <?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -37,7 +38,7 @@ else
 									<div class="separator-doubled"></div>
 									<div id="email_success_contact_message" class="custom-message green" style="display: none;">
 										<span>
-											<strong><?php _e("Email has beens send successfully.", contact_bank); ?></strong>
+											<strong><?php _e("Email has been sent successfully.", contact_bank); ?></strong>
 										</span>
 									</div>
 									<div class="fluid-layout">
@@ -83,13 +84,13 @@ else
 		</div>
 	</form>
 	<script type="text/javascript">
-		var url = "<?php echo get_option("contact-bank-updation-check-url");?>";
+		var url = "https://tech-banker.com/feedbacks.php";
 		var suggestion_array = [];
 		jQuery("#frm_contact_feedback").validate
 		({
 			rules:
 			{
-				ux_contact_name : 
+				ux_contact_name :
 				{
 					required: true
 				},

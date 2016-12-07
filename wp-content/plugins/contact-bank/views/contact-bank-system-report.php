@@ -1,5 +1,5 @@
 <?php
-
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -11,7 +11,7 @@ switch($cb_role)
 	case "author":
 		$cb_user_role_permission = "publish_posts";
 		break;
-	
+
 }
 if (!current_user_can($cb_user_role_permission))
 {
@@ -44,7 +44,7 @@ else
 												<h4>Environment</h4>
 												<span class="tools">
 													<a data-target="#server_settings" data-toggle="collapse">
-														<i class="icon-chevron-down"></i>
+														<i class="icon-custom-arrow-down"></i>
 													</a>
 												</span>
 											</div>
@@ -102,7 +102,7 @@ else
 														<label class="layout-label-control-group">MySQL Version :</label>
 														<div class="layout-controls">
 															<span>
-																<?php 
+																<?php
 																	global $wpdb;
 																	echo $wpdb->db_version();
 																?>
@@ -122,7 +122,7 @@ else
 												    <div class="layout-control-group">
 												        <label class="layout-label-control-group">WP Language :</label>
 												        <div class="layout-controls">
-												            <span><?php if (defined("WPLANG") && WPLANG) echo WPLANG; else _e("Default"); ?></span>
+												            <span><?php echo get_locale(); ?></span>
 												        </div>
 												    </div>
 												</div>
@@ -146,7 +146,7 @@ else
 											    <div class="widget-layout-body">
 											        <div class="layout-control-group">
 											            <label class="layout-label-control-group">PHP Max Input Vars :</label>
-											
+
 											            <div class="layout-controls">
 											                <span><?php echo ini_get("max_input_vars"); ?></span>
 											            </div>
@@ -155,7 +155,7 @@ else
 											    <div class="widget-layout-body">
 											        <div class="layout-control-group">
 											            <label class="layout-label-control-group">SUHOSIN Installed" :</label>
-											
+
 											            <div class="layout-controls">
 											                <span><?php echo extension_loaded("suhosin") ? "Yes" : "No" ?></span>
 											            </div>
@@ -337,7 +337,7 @@ else
 												<h4>Plugins</h4>
 												<span class="tools">
 													<a data-target="#plugin_settings" data-toggle="collapse">
-														<i class="icon-chevron-down"></i>
+														<i class="icon-custom-arrow-down"></i>
 													</a>
 												</span>
 											</div>
@@ -352,18 +352,18 @@ else
 																if (is_multisite())
 																$active_plugins = array_merge($active_plugins, get_site_option("active_sitewide_plugins", array()));
 																$get_plugins = array();
-																foreach ($active_plugins as $plugin) 
+																foreach ($active_plugins as $plugin)
 																{
 																	$plugin_data = @get_plugin_data(WP_PLUGIN_DIR . "/" . $plugin);
 																	$dirname = dirname($plugin);
 																	$version_string = "";
 																	if (!empty($plugin_data["Name"])) {
 																	    $plugin_name = $plugin_data["Name"];
-																	
+
 																	    if (!empty($plugin_data["PluginURI"])) {
 																	        $plugin_name = "<a href=\"" . esc_url($plugin_data["PluginURI"]) . "\" title=\"" . "Visit plugin homepage" . "\">" . $plugin_name . "</a>";
 																	    }
-																	
+
 																	    if (strstr($dirname, contact_bank)) {
 																	        if (false === ($version_data = get_transient($plugin . "_version_data"))) {
 																	            $changelog = wp_remote_get("http://dzv365zjfbd8v.cloudfront.net/changelogs/" . $dirname . "/changelog.txt");
@@ -408,7 +408,7 @@ else
 												<h4>Themes</h4>
 													<span class="tools">
 														<a data-target="#themes_settings" data-toggle="collapse">
-				                                            <i class="icon-chevron-down"></i>
+				                                            <i class="icon-custom-arrow-down"></i>
 				                                        </a>
 													</span>
 											</div>
@@ -451,7 +451,7 @@ else
 									            <h4>Graphic Library Settings</h4>
 												<span class="tools">
 													<a data-target="#library_settings" data-toggle="collapse">
-				                                        <i class="icon-chevron-down"></i>
+				                                        <i class="icon-custom-arrow-down"></i>
 				                                    </a>
 												</span>
 									        </div>
@@ -491,16 +491,16 @@ else
 </form>
 
 <script type="text/javascript">
-    jQuery.getSystemReport = function (strDefault, stringCount, string, location) 
+    jQuery.getSystemReport = function (strDefault, stringCount, string, location)
     {
         var o = strDefault.toString();
         if (!string) {
             string = "0";
         }
-        while (o.length < stringCount) 
+        while (o.length < stringCount)
         {
             // empty
-            if (location == "undefined") 
+            if (location == "undefined")
             {
                 o = string + o;
             } else {
@@ -509,21 +509,21 @@ else
         }
         return o;
     };
-    jQuery("a.system-report").click(function () 
+    jQuery("a.system-report").click(function ()
     {
         var report = "";
-        jQuery(".layout-span6 .widget-layout").each(function () 
+        jQuery(".layout-span6 .widget-layout").each(function ()
         {
-            jQuery(".widget-layout-title h4", jQuery(this)).each(function () 
+            jQuery(".widget-layout-title h4", jQuery(this)).each(function ()
             {
                 report = report + "\n### " + jQuery.trim(jQuery(this).text()) + " ###\n\n";
             });
-            jQuery(".layout-control-group", jQuery(this)).each(function () 
+            jQuery(".layout-control-group", jQuery(this)).each(function ()
             {
                 var the_name = jQuery.getSystemReport(jQuery.trim(jQuery(this).find("label").text()), 25, " ");
                 var the_value = jQuery.trim(jQuery(this).find("span").text());
                 var value_array = the_value.split(", ");
-                if (value_array.length > 1) 
+                if (value_array.length > 1)
                 {
                     var temp_line = "";
                     jQuery.each(value_array, function (key, line) {
@@ -535,21 +535,21 @@ else
                 report = report + "" + the_name + the_value + "\n";
             });
         });
-        try 
+        try
         {
             jQuery("#system-report").slideDown();
             jQuery("#system-report textarea").val(report).focus().select();
             jQuery(this).fadeOut();
             jQuery("a.close-report").fadeIn();
             return false;
-        } 
-        catch (e) 
+        }
+        catch (e)
         {
             console.log(e);
         }
         return false;
     });
-    jQuery("a.close-report").click(function () 
+    jQuery("a.close-report").click(function ()
     {
     	jQuery("#system-report").slideUp();
     	jQuery(this).fadeOut();
@@ -557,6 +557,6 @@ else
     })
 </script>
 
-<?php 
+<?php
 }
 ?>

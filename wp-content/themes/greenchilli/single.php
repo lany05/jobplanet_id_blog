@@ -7,7 +7,10 @@
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 					<div id="post-<?php the_ID(); ?>" <?php post_class('g post'); ?>>
                     <div class="single_post">
-				<header>                        
+				<header>          
+<?php if ( function_exists('yoast_breadcrumb') ) 
+{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
+              
 					<h1 class="title single-title"><?php the_title(); ?></h1>
                 <?php if($options['mts_headline_meta'] == '1') { ?>
                         <div class="post-info">

@@ -1,4 +1,5 @@
-<?php 
+<?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -17,7 +18,7 @@ if (!current_user_can($cb_user_role_permission))
 	return;
 }
 else
-{ 
+{
 ?>
 <form id="shortcode" class="layout-form" method="post">
 	<div id="poststuff" style="width: 99% !important;">
@@ -38,6 +39,6 @@ else
 		</div>
 	</div>
 </form>
-<?php 
+<?php
 }
 ?>

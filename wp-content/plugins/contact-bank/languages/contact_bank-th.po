@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Contact Bank\n"
-"POT-Creation-Date: 2015-03-03 15:07+0530\n"
-"PO-Revision-Date: 2015-03-04 17:48+0530\n"
+"POT-Creation-Date: 2016-07-18 18:26+0530\n"
+"PO-Revision-Date: 2016-07-18 18:26+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -11,146 +11,146 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.7.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
-"X-Poedit-Basepath: C:\\xampp\\htdocs\\wordpress4.0.1\\wp-content\\plugins\\contact-bank\n"
+"X-Poedit-Basepath: C:\\xampp\\htdocs\\wordpress3\\wp-content\\plugins\\contact-bank\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: contact-bank.php:84 contact-bank.php:101 contact-bank.php:118
+#: contact-bank.php:89 contact-bank.php:106 contact-bank.php:123
 msgid "Contact Bank"
 msgstr "Contact Bank"
 
-#: contact-bank.php:85 contact-bank.php:102 contact-bank.php:119 contact-bank.php:657
-#: contact-bank.php:733 contact-bank.php:810 views/header.php:115 views/header.php:129
+#: contact-bank.php:90 contact-bank.php:107 contact-bank.php:124 contact-bank.php:953
+#: contact-bank.php:1030 contact-bank.php:1107 views/header.php:115 views/header.php:129
 #: views/header.php:143
 msgid "Dashboard"
 msgstr "กระดานกันน้ำกระเด้น"
 
-#: contact-bank.php:87 contact-bank.php:104 contact-bank.php:121 contact-bank.php:663
-#: contact-bank.php:739 contact-bank.php:816 views/automatic-plugin-update.php:28
+#: contact-bank.php:92 contact-bank.php:109 contact-bank.php:126 contact-bank.php:959
+#: contact-bank.php:1036 contact-bank.php:1113 views/automatic-plugin-update.php:28
 #: views/automatic-plugin-update.php:32
 msgid "Plugin Updates"
 msgstr "อัพเดทปลั๊กอิน"
 
-#: contact-bank.php:88 contact-bank.php:105 contact-bank.php:122 contact-bank.php:669
-#: contact-bank.php:745 contact-bank.php:822 views/header.php:116 views/header.php:130
+#: contact-bank.php:93 contact-bank.php:110 contact-bank.php:127 contact-bank.php:965
+#: contact-bank.php:1042 contact-bank.php:1119 views/header.php:116 views/header.php:130
 #: views/header.php:144
 msgid "Short-Codes"
 msgstr "รหัสโทรศัพท์สั้น"
 
-#: contact-bank.php:89 contact-bank.php:106 contact-bank.php:123 contact-bank.php:675
-#: contact-bank.php:751 contact-bank.php:828 views/contact_frontend_data.php:31
+#: contact-bank.php:94 contact-bank.php:111 contact-bank.php:128 contact-bank.php:971
+#: contact-bank.php:1048 contact-bank.php:1125 views/contact_frontend_data.php:30
 #: views/dashboard.php:124 views/header.php:117 views/header.php:131 views/header.php:145
 msgid "Form Entries"
 msgstr "แบบฟอร์ม คอมเมนต์"
 
-#: contact-bank.php:90 contact-bank.php:107 contact-bank.php:124 contact-bank.php:681
-#: contact-bank.php:757 contact-bank.php:834 views/contact_email_settings.php:30
+#: contact-bank.php:95 contact-bank.php:112 contact-bank.php:129 contact-bank.php:977
+#: contact-bank.php:1054 contact-bank.php:1131 views/contact_email_settings.php:29
 #: views/dashboard.php:119 views/header.php:118 views/header.php:132 views/header.php:146
 msgid "Email Settings"
 msgstr "อีเมล์ การตั้งค่า"
 
-#: contact-bank.php:91 contact-bank.php:108 contact-bank.php:125 contact-bank.php:687
-#: contact-bank.php:763 contact-bank.php:840 views/contact_bank_layout_settings.php:29
+#: contact-bank.php:96 contact-bank.php:113 contact-bank.php:130 contact-bank.php:983
+#: contact-bank.php:1060 contact-bank.php:1137 views/contact_bank_layout_settings.php:29
 #: views/dashboard.php:114 views/header.php:119 views/header.php:133 views/header.php:147
 msgid "Global Settings"
 msgstr "การตั้งค่าสากล"
 
-#: contact-bank.php:92 contact-bank.php:109 contact-bank.php:126 contact-bank.php:693
-#: contact-bank.php:769 contact-bank.php:846 views/contact-feedback.php:33
+#: contact-bank.php:97 contact-bank.php:114 contact-bank.php:131 contact-bank.php:989
+#: contact-bank.php:1066 contact-bank.php:1143 views/contact-feedback.php:33
 msgid "Feature Requests"
 msgstr "ขอคุณสมบัติ"
 
-#: contact-bank.php:93 contact-bank.php:110 contact-bank.php:127 contact-bank.php:699
-#: contact-bank.php:776 views/contact-bank-system-report.php:31
+#: contact-bank.php:98 contact-bank.php:115 contact-bank.php:132 contact-bank.php:995
+#: contact-bank.php:1073 views/contact-bank-system-report.php:31
 msgid "System Status"
 msgstr "สถานะระบบ"
 
-#: contact-bank.php:94 contact-bank.php:111 contact-bank.php:128 contact-bank.php:705
-#: contact-bank.php:782 contact-bank.php:852 views/header.php:85 views/header.php:120
+#: contact-bank.php:99 contact-bank.php:116 contact-bank.php:133 contact-bank.php:1001
+#: contact-bank.php:1079 contact-bank.php:1149 views/header.php:85 views/header.php:120
 #: views/header.php:134 views/header.php:148
 msgid "Recommendations"
 msgstr "เสนอแนะ"
 
-#: contact-bank.php:95 contact-bank.php:112 contact-bank.php:129 contact-bank.php:712
-#: contact-bank.php:789 contact-bank.php:859 views/header.php:121 views/header.php:135
-#: views/header.php:149
+#: contact-bank.php:100 contact-bank.php:117 contact-bank.php:134 contact-bank.php:1008
+#: contact-bank.php:1086 contact-bank.php:1156 views/header.php:121 views/header.php:135
+#: views/header.php:149 views/purchase_pro_version.php:32
 msgid "Premium Editions"
 msgstr "เวอร์ชันพรีเมี่ยม"
 
-#: contact-bank.php:96 contact-bank.php:113 contact-bank.php:130 contact-bank.php:719
-#: contact-bank.php:796 contact-bank.php:866 views/header.php:90 views/header.php:122
+#: contact-bank.php:101 contact-bank.php:118 contact-bank.php:135 contact-bank.php:1015
+#: contact-bank.php:1093 contact-bank.php:1163 views/header.php:90 views/header.php:122
 #: views/header.php:136 views/header.php:150
 msgid "Our Other Services"
 msgstr "บริการอื่น ๆ ของเรา"
 
-#: contact-bank.php:874
+#: contact-bank.php:1176
 msgid "Add Contact Bank Form"
 msgstr "เพิ่มแบบฟอร์มContactBank"
 
-#: contact-bank.php:886
+#: contact-bank.php:1192
 msgid "Insert Contact Bank Form"
 msgstr "แทรกแบบฟอร์มContactBank"
 
-#: contact-bank.php:888
+#: contact-bank.php:1194
 msgid "Select a form below to add it to your post or page."
 msgstr "เลือกแบบฟอร์มด้านล่างเพื่อเพิ่มลงในการโพสต์หรือหน้าเว็บของคุณ"
 
-#: contact-bank.php:893
+#: contact-bank.php:1199
 msgid "Form Name"
 msgstr "แบบฟอร์ม ชื่อที่"
 
-#: contact-bank.php:895
+#: contact-bank.php:1201
 msgid "Select a Form"
 msgstr "เลือก-แบบฟอร์ม"
 
-#: contact-bank.php:912
+#: contact-bank.php:1218
 msgid "Show Form Title"
 msgstr "แสดงให้ในแบบฟอร์มชื่อเรื่อง"
 
-#: contact-bank.php:916
+#: contact-bank.php:1222
 msgid "Show Form Description"
 msgstr "แสดง-ฟอร์มคำอธิบาย"
 
-#: contact-bank.php:921
+#: contact-bank.php:1227
 msgid "Insert Form"
 msgstr "แทรกในแบบฟอร์ม"
 
-#: contact-bank.php:924
+#: contact-bank.php:1230
 msgid "Cancel"
 msgstr "ยกเลิก"
 
-#: contact-bank.php:937
+#: contact-bank.php:1243
 msgid "Please choose a Form to insert into Shortcode"
 msgstr "กรุณาเลือกในแบบฟอร์มเพื่อแทรกลงในรหัสย่อ"
 
-#: contact-bank.php:973
+#: contact-bank.php:1290
 msgid "View Contact Bank Documentation"
 msgstr "ติดต่อผู้Bankเอกสารประกอบ"
 
-#: contact-bank.php:973
+#: contact-bank.php:1290
 msgid "Docs"
 msgstr "เอกสาร"
 
-#: contact-bank.php:974
+#: contact-bank.php:1291
 msgid "View Contact Bank Premium Editions"
 msgstr "ดูContact Bankรุ่นพรีเมี่ยม"
 
-#: contact-bank.php:974
+#: contact-bank.php:1291
 msgid "Go for Premium!"
 msgstr "ไปสำหรับพรีเมี่ยม!"
 
-#: contact-bank.php:1048
+#: contact-bank.php:1392
 msgid "Select Form :"
 msgstr "เลือก-ฟอร์ม:"
 
-#: contact-bank.php:1050 views/contact_bank_layout_settings.php:45
-#: views/contact_bank_layout_settings.php:55 views/contact_email_settings.php:37
-#: views/contact_email_settings.php:53 views/contact_frontend_data.php:46
-#: views/contact_frontend_data.php:56
+#: contact-bank.php:1394 views/contact_bank_layout_settings.php:45
+#: views/contact_bank_layout_settings.php:55 views/contact_email_settings.php:36
+#: views/contact_email_settings.php:52 views/contact_frontend_data.php:45
+#: views/contact_frontend_data.php:55
 msgid "Select Form"
 msgstr "เลือก-ฟอร์ม:"
 
-#: frontend_views/contact_bank_forms.php:344 views/contact_bank_form_preview.php:395
-#: views/contact_controls_files.php:89
+#: frontend_views/contact_bank_forms.php:343 views/contact_bank_form_preview.php:395
+#: views/contact_controls_files.php:95
 msgid "Select Option"
 msgstr "เลือกตัวเลือกที่"
 
@@ -164,12 +164,12 @@ msgid "Label"
 msgstr "ฉลาก"
 
 #: includes/cb_checkbox.php:61 includes/cb_checkbox.php:163 includes/cb_dropdown.php:61
-#: includes/cb_dropdown.php:163 includes/cb_email.php:62 includes/cb_email.php:152
+#: includes/cb_dropdown.php:164 includes/cb_email.php:62 includes/cb_email.php:152
 #: includes/cb_multiple.php:63 includes/cb_multiple.php:183 includes/cb_text.php:62
 #: includes/cb_text.php:151 includes/cb_textarea.php:61 includes/cb_textarea.php:149
-#: views/contact_controls_files.php:36 views/contact_controls_files.php:52
-#: views/contact_controls_files.php:85 views/contact_controls_files.php:101
-#: views/contact_controls_files.php:118
+#: views/contact_controls_files.php:36 views/contact_controls_files.php:54
+#: views/contact_controls_files.php:91 views/contact_controls_files.php:108
+#: views/contact_controls_files.php:126
 msgid "Untitled"
 msgstr "ไม่ได้ตั้งชื่อ"
 
@@ -200,14 +200,14 @@ msgstr "คำแนะนำเครื่องมือ ข้อควา�
 
 #: includes/cb_checkbox.php:116 includes/cb_dropdown.php:116 includes/cb_email.php:134
 #: includes/cb_multiple.php:127 includes/cb_text.php:133 includes/cb_textarea.php:132
-#: views/contact_bank_layout_settings.php:946 views/contact_frontend_data.php:171
-#: views/dashboard.php:208 views/includes_common_after.php:349
-#: views/includes_common_after.php:352 views/includes_common_after.php:355
-#: views/includes_common_after.php:358 views/includes_common_after.php:361
-#: views/includes_common_after.php:364 views/includes_common_after.php:367
-#: views/includes_common_after.php:370 views/includes_common_after.php:373
-msgid "This Feature is only available in Paid Premium Edition!"
-msgstr "คุณลักษณะที่นี้จะใช้ได้เฉพาะในรุ่นพรีเมี่ยมที่เรียกชำระแล้ว!"
+#: views/contact_frontend_data.php:176 views/dashboard.php:217
+#: views/includes_common_after.php:442 views/includes_common_after.php:445
+#: views/includes_common_after.php:448 views/includes_common_after.php:451
+#: views/includes_common_after.php:454 views/includes_common_after.php:457
+#: views/includes_common_after.php:460 views/includes_common_after.php:463
+#: views/includes_common_after.php:466
+msgid "This Feature is only available in Premium Editions!"
+msgstr "คุณลักษณะนี้จะใช้ได้เฉพาะในรุ่นพรีเมี่ยม!"
 
 #: includes/cb_checkbox.php:120 includes/cb_dropdown.php:120 includes/cb_multiple.php:132
 msgid "Options"
@@ -221,35 +221,35 @@ msgstr "ป้อนตัวเลือกการ"
 msgid "Add"
 msgstr "เพิ่ม"
 
-#: includes/cb_checkbox.php:154 includes/cb_dropdown.php:154 includes/cb_multiple.php:172
+#: includes/cb_checkbox.php:154 includes/cb_dropdown.php:155 includes/cb_multiple.php:172
 msgid "Delete"
 msgstr "ลบ"
 
-#: includes/cb_checkbox.php:161 includes/cb_dropdown.php:161 includes/cb_email.php:149
+#: includes/cb_checkbox.php:161 includes/cb_dropdown.php:162 includes/cb_email.php:149
 #: includes/cb_multiple.php:179 includes/cb_text.php:148 includes/cb_textarea.php:147
 msgid "Admin Label"
 msgstr "ผู้ดูแลระบบ- ฉลาก"
 
-#: includes/cb_checkbox.php:163 includes/cb_dropdown.php:163 includes/cb_email.php:153
+#: includes/cb_checkbox.php:163 includes/cb_dropdown.php:164 includes/cb_email.php:153
 #: includes/cb_multiple.php:182 includes/cb_text.php:150 includes/cb_textarea.php:150
 msgid "Enter Admin Label"
 msgstr " ป้อน-ผู้ดูแลระบบ-ฉลาก"
 
-#: includes/cb_checkbox.php:167 includes/cb_dropdown.php:167 includes/cb_email.php:158
+#: includes/cb_checkbox.php:167 includes/cb_dropdown.php:168 includes/cb_email.php:158
 #: includes/cb_multiple.php:187 includes/cb_text.php:156 includes/cb_textarea.php:154
 msgid "Do not show in the email"
 msgstr "ไม่ต้องแสดงในอีเมลการ"
 
-#: includes/cb_checkbox.php:198 includes/cb_dropdown.php:198 includes/cb_email.php:192
-#: includes/cb_multiple.php:221 includes/cb_text.php:219 includes/cb_textarea.php:215
+#: includes/cb_checkbox.php:198 includes/cb_dropdown.php:199 includes/cb_email.php:192
+#: includes/cb_multiple.php:221 includes/cb_text.php:216 includes/cb_textarea.php:209
 msgid "Save Settings"
 msgstr "บันทึกการตั้งค่า"
 
-#: includes/cb_checkbox.php:247 includes/cb_dropdown.php:238 includes/cb_multiple.php:271
+#: includes/cb_checkbox.php:292 includes/cb_dropdown.php:285 includes/cb_multiple.php:316
 msgid "Please Fill an Option."
 msgstr "กรุณากรอกตัวเลือกที่"
 
-#: includes/cb_dropdown.php:55 views/contact_view.php:461
+#: includes/cb_dropdown.php:55 views/contact_view.php:458
 msgid "Select Box"
 msgstr "เลือกต่อ-ในกล่อง"
 
@@ -262,7 +262,7 @@ msgstr "ใส่ฉลาก"
 msgid "Enter Option"
 msgstr "Enterตัวเลือก"
 
-#: includes/cb_email.php:55 views/contact_view.php:458
+#: includes/cb_email.php:55 views/contact_view.php:455
 msgid "Email Address"
 msgstr "ที่อยู่อีเมล์"
 
@@ -282,11 +282,11 @@ msgstr "สถานที่ที่ผู้ถือ"
 msgid "Enter Place Holder"
 msgstr "ป้อนสถานที่ที่ผู้ถือ"
 
-#: includes/cb_multiple.php:55 views/contact_view.php:469
+#: includes/cb_multiple.php:55 views/contact_view.php:466
 msgid "Radio Buttons"
 msgstr "ปุ่มวิทยุ"
 
-#: includes/cb_text.php:55 views/contact_view.php:450
+#: includes/cb_text.php:55 views/contact_view.php:447
 msgid "Single Line Text"
 msgstr "เดียว-ข้อความข้อมูลบรรทัด"
 
@@ -294,34 +294,34 @@ msgstr "เดียว-ข้อความข้อมูลบรรทั�
 msgid "Add a filter"
 msgstr "เพิ่มตัวกรอง"
 
-#: includes/cb_text.php:192 includes/cb_textarea.php:189
+#: includes/cb_text.php:191 includes/cb_textarea.php:188
 msgid "Alpha"
 msgstr "แอลฟา"
 
-#: includes/cb_text.php:196 includes/cb_textarea.php:193
+#: includes/cb_text.php:195 includes/cb_textarea.php:191
 msgid "Alpha Numeric"
 msgstr "อัลฟาที่เป็นตัวเลข"
 
-#: includes/cb_text.php:200 includes/cb_textarea.php:197
+#: includes/cb_text.php:199 includes/cb_textarea.php:194
 msgid "Digits"
 msgstr "เลขโดด"
 
-#: includes/cb_text.php:204 includes/cb_textarea.php:201
+#: includes/cb_text.php:203 includes/cb_textarea.php:197
 msgid "Strip Tags"
 msgstr "สตริปแท็ก"
 
-#: includes/cb_text.php:208 includes/cb_textarea.php:205
+#: includes/cb_text.php:207 includes/cb_textarea.php:200
 msgid "Trim"
 msgstr "ตัดแต่ง"
 
-#: includes/cb_text.php:210 includes/cb_textarea.php:207
+#: includes/cb_text.php:209 includes/cb_textarea.php:202
 #: views/contact_bank_layout_settings.php:83 views/contact_bank_layout_settings.php:271
 #: views/contact_bank_layout_settings.php:481 views/contact_bank_layout_settings.php:674
-#: views/contact_bank_layout_settings.php:802 views/contact_view.php:479
-msgid " (Available in Premium Edition)"
-msgstr "(ที่มีจำหน่ายใน Premium Edition)"
+#: views/contact_bank_layout_settings.php:802 views/contact_view.php:476
+msgid " (Available in Premium Editions)"
+msgstr "(มีอยู่ในรุ่นพรีเมี่ยม)"
 
-#: includes/cb_textarea.php:55 views/contact_view.php:453
+#: includes/cb_textarea.php:55 views/contact_view.php:450
 msgid "Paragraph Text"
 msgstr "ข้อความข้อมูลย่อหน้า"
 
@@ -351,180 +351,119 @@ msgstr "ลบรายการการตั้งค่าอีเมล์
 msgid "Delete Form Entry"
 msgstr "ลบ แบบฟอร์ม-รายการเข้า"
 
-#: lib/install-script.php:238
-msgid "blank_field_message"
-msgstr "ที่ว่างเปล่าภาคสนามข้อความส่วนตัว"
-
-#: lib/install-script.php:239 lib/install-script.php:666 views/contact_view.php:305
-msgid "Required field must not be blank"
-msgstr "ฟิลด์ที่จำเป็นไม่เป็นที่ว่างเปล่า"
-
-#: lib/install-script.php:248
-msgid "incorrect_email_message"
-msgstr "ข้อความอีเมลไม่ถูกต้อง"
-
-#: lib/install-script.php:249 lib/install-script.php:676 views/contact_view.php:317
-msgid "Please enter a valid email address"
-msgstr "กรุณาใส่ที่อยู่อีเมลที่ถูกต้อง"
-
-#: lib/install-script.php:539 lib/install-script.php:918
-msgid "Submit"
-msgstr "ส่งข้อมูล"
-
-#: lib/install-script.php:626
-msgid "Contact Form Demo"
-msgstr "แบบฟอร์มติดต่อ-สาธิต"
-
-#: lib/install-script.php:656
-msgid "Your message was sent successfully. Thanks."
-msgstr "ข้อความของคุณถูกส่งเรียบร้อยแล้ว ขอบคุณ"
-
-#: lib/install-script.php:710 lib/install-script.php:714 lib/install-script.php:715
-msgid "Your Name"
-msgstr "ชื่อของคุณ"
-
-#: lib/install-script.php:761 lib/install-script.php:765 lib/install-script.php:766
-msgid "Your Email"
-msgstr "อีเมล์ของคุณ"
-
-#: lib/install-script.php:807 lib/install-script.php:811 lib/install-script.php:812
-#: views/add_contact_email.php:202
-msgid "Subject"
-msgstr "เรื่อง"
-
-#: lib/install-script.php:860 lib/install-script.php:864 lib/install-script.php:865
-msgid "Your Message"
-msgstr "ข้อความของคุณ"
-
-#: lib/install-script.php:992
-msgid "Admin Notification"
-msgstr "งานธุรการการแจ้งเตือน"
-
-#: lib/install-script.php:995 lib/install-script.php:1022
-msgid "Site Administration"
-msgstr "การดูแลไซต์"
-
-#: lib/install-script.php:997
-msgid "New Contact recieved from Website"
-msgstr "ติดต่อใหม่ได้รับจากเว็บไซต์"
-
-#: lib/install-script.php:1020
-msgid "Client Notification"
-msgstr "ไคลเอ็นต์ การแจ้งเตือน"
-
-#: lib/install-script.php:1021
-msgid "Thanks for visiting our website"
-msgstr "ขอบคุณสำหรับการเยี่ยมชมเว็บไซต์ของเรา"
-
-#: views/add_contact_email.php:50 views/contact_email_settings.php:88
+#: views/add_contact_email.php:69 views/contact_email_settings.php:87
 msgid "Email Confirmation"
 msgstr "การยืนยันอีเมล์"
 
-#: views/add_contact_email.php:53
+#: views/add_contact_email.php:72
 msgid "Back to Email Settings"
 msgstr "กลับไปที่อีเมล์ การตั้งค่า"
 
-#: views/add_contact_email.php:54 views/add_contact_email.php:234
+#: views/add_contact_email.php:73 views/add_contact_email.php:415
 #: views/contact_bank_layout_settings.php:35 views/contact_bank_layout_settings.php:520
 #: views/contact_bank_layout_settings.php:932
 msgid "Save"
 msgstr "ประหยัด"
 
-#: views/add_contact_email.php:58
+#: views/add_contact_email.php:77
 msgid "Email Settings Saved. Kindly wait for the redirect."
 msgstr "การตั้งค่าอีเมล์ที่บันทึกไว้ กรุณารอการเปลี่ยนเส้นทาง"
 
-#: views/add_contact_email.php:65 views/add_contact_email.php:122
-#: views/contact_controls_files.php:68
+#: views/add_contact_email.php:84 views/add_contact_email.php:141
+#: views/contact_controls_files.php:72
 msgid "Email"
 msgstr "อีเมล์"
 
-#: views/add_contact_email.php:69 views/contact-feedback.php:51 views/contact_view.php:486
+#: views/add_contact_email.php:88 views/contact-feedback.php:51 views/contact_view.php:483
 msgid "Name"
 msgstr "ชื่อ"
 
-#: views/add_contact_email.php:73
+#: views/add_contact_email.php:92
 msgid "Enter Name"
 msgstr "ป้อน-ชื่อ"
 
-#: views/add_contact_email.php:79
+#: views/add_contact_email.php:98
 msgid "Send To"
 msgstr "ส่งไปที่"
 
-#: views/add_contact_email.php:88 views/add_contact_email.php:99
-#: views/add_contact_email.php:111 views/add_contact_email.php:171
+#: views/add_contact_email.php:107 views/add_contact_email.php:118
+#: views/add_contact_email.php:130 views/add_contact_email.php:250
 msgid "Enter Email"
 msgstr "ป้อน-อีเมล์"
 
-#: views/add_contact_email.php:90 views/add_contact_email.php:101
-#: views/add_contact_email.php:113
+#: views/add_contact_email.php:109 views/add_contact_email.php:120
+#: views/add_contact_email.php:132
 msgid "Select a Field"
 msgstr "เลือกเขตข้อมูล"
 
-#: views/add_contact_email.php:126
+#: views/add_contact_email.php:145
 msgid "Enter Email "
 msgstr "ป้อน-อีเมล์"
 
-#: views/add_contact_email.php:130
+#: views/add_contact_email.php:149
 msgid "Send To Field"
 msgstr "ส่งไปที่สนาม"
 
-#: views/add_contact_email.php:134
+#: views/add_contact_email.php:153
 msgid "Enter Field "
 msgstr "ป้อน-ฟิลด์"
 
-#: views/add_contact_email.php:136 views/add_contact_email.php:149
-#: views/add_contact_email.php:162 views/add_contact_email.php:173
-#: views/add_contact_email.php:184 views/add_contact_email.php:195
-#: views/add_contact_email.php:208
+#: views/add_contact_email.php:155 views/add_contact_email.php:188
+#: views/add_contact_email.php:221 views/add_contact_email.php:252
+#: views/add_contact_email.php:283 views/add_contact_email.php:314
+#: views/add_contact_email.php:347
 msgid "Select a field"
 msgstr "ส่งไปที่สนาม"
 
-#: views/add_contact_email.php:143
+#: views/add_contact_email.php:182
 msgid "From Name"
 msgstr "จาก-ชื่อ"
 
-#: views/add_contact_email.php:147
+#: views/add_contact_email.php:186
 msgid "Enter from name "
 msgstr "ป้อน จาก-ชื่อ"
 
-#: views/add_contact_email.php:156
+#: views/add_contact_email.php:215
 msgid "From Email"
 msgstr "จาก-อีเมล"
 
-#: views/add_contact_email.php:160
+#: views/add_contact_email.php:219
 msgid "Enter from email"
 msgstr "ป้อนจากอีเมล"
 
-#: views/add_contact_email.php:169
+#: views/add_contact_email.php:248
 msgid "Reply To"
 msgstr "ตอบ สู่"
 
-#: views/add_contact_email.php:180
+#: views/add_contact_email.php:279
 msgid "CC"
 msgstr "CC"
 
-#: views/add_contact_email.php:182
+#: views/add_contact_email.php:281
 msgid "Enter CC Email "
 msgstr "ป้อน- CC อีเมล"
 
-#: views/add_contact_email.php:191
+#: views/add_contact_email.php:310
 msgid "BCC"
 msgstr "BCC"
 
-#: views/add_contact_email.php:193
+#: views/add_contact_email.php:312
 msgid "Enter Bcc Email"
 msgstr "ป้อน- Bcc อีเมล"
 
-#: views/add_contact_email.php:206
+#: views/add_contact_email.php:341
+msgid "Subject"
+msgstr "เรื่อง"
+
+#: views/add_contact_email.php:345
 msgid "Enter Subject"
 msgstr "ป้อนเรื่อง"
 
-#: views/add_contact_email.php:215
+#: views/add_contact_email.php:374
 msgid "Message"
 msgstr "ข่าวสาร"
 
-#: views/add_contact_email.php:225
+#: views/add_contact_email.php:386
 msgid "Insert a Field into Your Form Message"
 msgstr "แทรกฟิลด์ลงไปในของคุณรูปข่าวสาร"
 
@@ -544,19 +483,16 @@ msgstr "ได้รับ-ระบบ-รายงาน"
 msgid "Close System Report"
 msgstr "ใกล้-ระบบ-รายงาน"
 
-#: views/contact-bank-system-report.php:125
-msgid "Default"
-msgstr "ผิดนัด"
-
 #: views/contact-feedback.php:36 views/contact_bank_form_preview.php:297
-#: views/contact_bank_layout_settings.php:32 views/contact_email_settings.php:33
-#: views/contact_frontend_data.php:34 views/contact_view.php:262
+#: views/contact_bank_layout_settings.php:32 views/contact_email_settings.php:32
+#: views/contact_frontend_data.php:33 views/contact_view.php:259
+#: views/purchase_pro_version.php:36
 msgid "Back to Dashboard"
 msgstr "กลับไปที่แดชบอร์ด"
 
 #: views/contact-feedback.php:40
-msgid "Email has beens send successfully."
-msgstr "อีเมล์ที่ได้รับการส่งประสบความสำเร็จ"
+msgid "Email has been sent successfully."
+msgstr "ส่งอีเมล์เรียบร้อย"
 
 #: views/contact-feedback.php:47 views/contact-feedback.php:63
 msgid "Feature Requests / Suggestions"
@@ -585,10 +521,6 @@ msgstr "ส่ง"
 #: views/contact_bank_form_preview.php:294 views/dashboard.php:129
 msgid "Form Preview"
 msgstr "แบบฟอร์ม แสดงตัวอย่าง"
-
-#: views/contact_bank_layout_settings.php:29
-msgid " (Premium Features available in Paid Edition)"
-msgstr "(สิ่งอำนวยความสะดวกพรีเมี่ยมที่มีอยู่ในข้อมูล Editionแล้ว)"
 
 #: views/contact_bank_layout_settings.php:33
 msgid "Restore Global Settings"
@@ -725,6 +657,10 @@ msgstr "ความสำเร็จ- ข้อความแสดง กา
 msgid "Error Message Settings"
 msgstr "ข้อความข้อผิดพลาด-การตั้งค่า"
 
+#: views/contact_bank_layout_settings.php:947
+msgid "These Features are only available in Premium Editions!"
+msgstr "คุณสมบัติเหล่านี้จะใช้ได้เฉพาะในรุ่นพรีเมี่ยม!"
+
 #: views/contact_bank_pro_version.php:44
 msgid "Contact Bank Pricing"
 msgstr "Contact Bankกำหนดราคา"
@@ -741,165 +677,173 @@ msgstr "ช่วยให้ได้รับการติดต่อ!"
 msgid "Order Now!"
 msgstr "ตอนนี้สั่งซื้อ!"
 
-#: views/contact_controls_files.php:41 views/contact_controls_files.php:57
-#: views/contact_controls_files.php:74 views/contact_controls_files.php:92
-#: views/contact_controls_files.php:108 views/contact_controls_files.php:125
+#: views/contact_controls_files.php:41 views/contact_controls_files.php:59
+#: views/contact_controls_files.php:78 views/contact_controls_files.php:98
+#: views/contact_controls_files.php:115 views/contact_controls_files.php:133
 msgid "Settings"
 msgstr "การตั้งค่า"
 
-#: views/contact_documentation.php:27
+#: views/contact_documentation.php:26
 msgid "Documentation - Contact Bank"
 msgstr "เอกสารประกอบ- Contact Bank"
 
-#: views/contact_email_settings.php:78
+#: views/contact_email_settings.php:77
 msgid "Add New"
 msgstr "เพิ่มใหม"
 
-#: views/contact_email_settings.php:159
+#: views/contact_email_settings.php:161
 msgid "Are you sure, you want to delete this Email Setting?"
 msgstr "คุณแน่ใจว่าคุณต้องการที่จะลบการตั้งค่าอีเมลนี้"
 
-#: views/contact_email_settings.php:177 views/contact_frontend_data.php:138
+#: views/contact_email_settings.php:182 views/contact_frontend_data.php:138
 msgid "Please select the Form first."
 msgstr "กรุณาเลือกแบบฟอร์มแรก"
 
-#: views/contact_frontend_data.php:35
+#: views/contact_frontend_data.php:34
 msgid "Export to Excel"
 msgstr "การส่งออกไปยัง Excel"
 
-#: views/contact_frontend_data.php:41 views/dashboard.php:64 views/dashboard.php:71
+#: views/contact_frontend_data.php:40 views/dashboard.php:64 views/dashboard.php:71
 msgid "Form"
 msgstr "แบบฟอร์ม"
 
-#: views/contact_view.php:259 views/dashboard.php:46
+#: views/contact_view.php:256 views/dashboard.php:46
 msgid "Add New Form"
 msgstr "เพิ่มฟอร์มใหม่"
 
-#: views/contact_view.php:265 views/contact_view.php:529
+#: views/contact_view.php:262 views/contact_view.php:525
 msgid "Save Form"
 msgstr "บันทึกฟอร์ม"
 
-#: views/contact_view.php:270
+#: views/contact_view.php:267
 msgid "Form Submitted. Kindly wait for the redirect."
 msgstr "แบบฟอร์ม-Submitted- กรุณารอการเปลี่ยนเส้นทาง"
 
-#: views/contact_view.php:279
+#: views/contact_view.php:276
 msgid "Form Settings"
 msgstr "แบบฟอร์ม-การตั้งค่า"
 
-#: views/contact_view.php:283
+#: views/contact_view.php:280
 msgid "Form Name :"
 msgstr "แบบฟอร์มชื่อ:"
 
-#: views/contact_view.php:289
+#: views/contact_view.php:286
 msgid "Enter Form Name"
 msgstr "ใส่ชื่อของแบบฟอร์ม"
 
-#: views/contact_view.php:293
+#: views/contact_view.php:290
 msgid "Form Description :"
 msgstr "ฟอร์ม-รายละเอียด:"
 
-#: views/contact_view.php:295
+#: views/contact_view.php:292
 msgid "Enter Form Description"
 msgstr "ป้อน ฟอร์ม-รายละเอียด:"
 
-#: views/contact_view.php:299
+#: views/contact_view.php:296
 msgid "Blank Field Message:"
 msgstr "ที่ว่างเปล่าข้อความแสดง Field:"
 
-#: views/contact_view.php:307
+#: views/contact_view.php:302
+msgid "Required field must not be blank"
+msgstr "ฟิลด์ที่จำเป็นไม่เป็นที่ว่างเปล่า"
+
+#: views/contact_view.php:304
 msgid "Enter Blank Field Message"
 msgstr "ป้อน ฟิลด์ว่างข้อความแสดง"
 
-#: views/contact_view.php:311
+#: views/contact_view.php:308
 msgid "Incorrect Email Message:"
 msgstr "ที่ไม่ถูกต้องข้อความแสดงอีเมล์:"
 
-#: views/contact_view.php:319
+#: views/contact_view.php:314
+msgid "Please enter a valid email address"
+msgstr "กรุณาใส่ที่อยู่อีเมลที่ถูกต้อง"
+
+#: views/contact_view.php:316
 msgid "Enter Incorrect Email Message"
 msgstr "อีเมลไม่ถูกต้อง  ข้อความแสดง"
 
-#: views/contact_view.php:323
+#: views/contact_view.php:320
 msgid "Success Message :"
 msgstr "ความสำเร็จข้อความ:"
 
-#: views/contact_view.php:327
+#: views/contact_view.php:324
 msgid "Enter Success Message"
 msgstr "Enter ข้อความแสดงความสำเร็จ message"
 
-#: views/contact_view.php:331
+#: views/contact_view.php:328
 msgid "Redirect :"
 msgstr "เปลี่ยนเส้นทาง:"
 
-#: views/contact_view.php:343 views/contact_view.php:354 views/contact_view.php:366
+#: views/contact_view.php:340 views/contact_view.php:351 views/contact_view.php:363
 msgid "Page"
 msgstr "หน้า"
 
-#: views/contact_view.php:346 views/contact_view.php:357 views/contact_view.php:369
+#: views/contact_view.php:343 views/contact_view.php:354 views/contact_view.php:366
 msgid "URL"
 msgstr "URL"
 
-#: views/contact_view.php:376
+#: views/contact_view.php:373
 msgid "Page :"
 msgstr "หน้า"
 
-#: views/contact_view.php:419
+#: views/contact_view.php:416
 msgid "URL :"
 msgstr "URL :"
 
-#: views/contact_view.php:426
+#: views/contact_view.php:423
 msgid "Enter Redirect URL"
 msgstr "ป้อน การเปลี่ยนเส้นทาง URL"
 
-#: views/contact_view.php:433
+#: views/contact_view.php:430
 msgid "Form Layout Preview"
 msgstr "แสดงตัวอย่างเค้าโครงแบบฟอร์ม"
 
-#: views/contact_view.php:444
+#: views/contact_view.php:441
 msgid "Standard Fields"
 msgstr "มาตรฐานทุ่ง"
 
-#: views/contact_view.php:447 views/contact_view.php:483
+#: views/contact_view.php:444 views/contact_view.php:480
 msgid "Click on a field to use into your form."
 msgstr "คลิกบนสนามที่จะใช้ในแบบฟอร์มของคุณ"
 
-#: views/contact_view.php:466
+#: views/contact_view.php:463
 msgid "Checkboxes"
 msgstr "ช่องทำเครื่องหมาย"
 
-#: views/contact_view.php:478
+#: views/contact_view.php:475
 msgid "Advanced Fields"
 msgstr "ขั้นสูงทุ่ง"
 
-#: views/contact_view.php:489
+#: views/contact_view.php:486
 msgid "Website / URL"
 msgstr "เว็บไซต์ / URL"
 
-#: views/contact_view.php:494
+#: views/contact_view.php:491
 msgid "Phone"
 msgstr "โทรศัพท์"
 
-#: views/contact_view.php:497
+#: views/contact_view.php:494
 msgid "Address"
 msgstr "ที่อยู่"
 
-#: views/contact_view.php:502
+#: views/contact_view.php:499
 msgid "Number"
 msgstr "จำนวน"
 
-#: views/contact_view.php:505
+#: views/contact_view.php:502
 msgid "File Upload"
 msgstr "อัปโหลดแฟ้ม"
 
-#: views/contact_view.php:510
+#: views/contact_view.php:507
 msgid "Date"
 msgstr "วันที่"
 
-#: views/contact_view.php:513
+#: views/contact_view.php:510
 msgid "Time"
 msgstr "เวลา"
 
-#: views/contact_view.php:518
+#: views/contact_view.php:515
 msgid "Password"
 msgstr "รหัสผ่าน"
 
@@ -931,11 +875,11 @@ msgstr "แก้ไข-แบบฟอร์ม"
 msgid "Delete Form"
 msgstr "ลบรายการแบบฟอร์ม"
 
-#: views/dashboard.php:189
+#: views/dashboard.php:192
 msgid "Are you sure, you want to delete this Form?"
 msgstr "คุณแน่ใจหรือว่าคุณต้องการลบรายการแบบฟอร์มนี้"
 
-#: views/dashboard.php:199
+#: views/dashboard.php:205
 msgid "Are you sure, you want to delete all Forms?"
 msgstr "คุณแน่ใจว่าคุณต้องการที่จะลบรายการฟอร์มทั้งหมดหรือไม่"
 
@@ -964,8 +908,8 @@ msgid "Online Demos"
 msgstr "สาธิตการใช้งานออนไลน์"
 
 #: views/header.php:48
-msgid "Premium Pricing Plan ?"
-msgstr "แผนการกำหนดราคาพรีเมี่?"
+msgid "Pricing Plans"
+msgstr "แผนกำหนดราคา"
 
 #: views/header.php:55
 msgid "Knowledge Base"
@@ -980,8 +924,8 @@ msgid "FAQ's"
 msgstr "คำถามที่พบบ่อย"
 
 #: views/header.php:70
-msgid "Detailed Features"
-msgstr "สิ่งอำนวยความสะดวกที่รายละเอียด"
+msgid "Renew Premium Support"
+msgstr "ต่ออายุการสนับสนุนพรีเมี่ยม"
 
 #: views/header.php:76
 msgid "More Actions"
@@ -991,9 +935,73 @@ msgstr "การดำเนินการอื่น ๆ"
 msgid "Plugin Customization"
 msgstr "การปรับแต่งปลั๊กอิน"
 
+#: views/purchase_pro_version.php:41
+msgid "WP Contact Bank is an one time Investment. Its Worth it!"
+msgstr "WP ติดต่อธนาคารเป็นเวลาหนึ่งการลงทุน มันคุ้มค่า!"
+
 #: views/shortcode.php:29
 msgid "How to setup Short-Codes for Contact Bank into your WordPress Page/Post?"
 msgstr "การตั้งค่าวิธีรหัสโทรศัพท์สั้นสำหรับContact Bankเป็นเวิร์ดเพรสของคุณ หน้า / โพสต์?"
+
+#~ msgid "Email has beens send successfully."
+#~ msgstr "อีเมล์ที่ได้รับการส่งประสบความสำเร็จ"
+
+#~ msgid "This Feature is only available in Paid Premium Edition!"
+#~ msgstr "คุณลักษณะที่นี้จะใช้ได้เฉพาะในรุ่นพรีเมี่ยมที่เรียกชำระแล้ว!"
+
+#~ msgid " (Available in Premium Edition)"
+#~ msgstr "(ที่มีจำหน่ายใน Premium Edition)"
+
+#~ msgid "blank_field_message"
+#~ msgstr "ที่ว่างเปล่าภาคสนามข้อความส่วนตัว"
+
+#~ msgid "incorrect_email_message"
+#~ msgstr "ข้อความอีเมลไม่ถูกต้อง"
+
+#~ msgid "Submit"
+#~ msgstr "ส่งข้อมูล"
+
+#~ msgid "Contact Form Demo"
+#~ msgstr "แบบฟอร์มติดต่อ-สาธิต"
+
+#~ msgid "Your message was sent successfully. Thanks."
+#~ msgstr "ข้อความของคุณถูกส่งเรียบร้อยแล้ว ขอบคุณ"
+
+#~ msgid "Your Name"
+#~ msgstr "ชื่อของคุณ"
+
+#~ msgid "Your Email"
+#~ msgstr "อีเมล์ของคุณ"
+
+#~ msgid "Your Message"
+#~ msgstr "ข้อความของคุณ"
+
+#~ msgid "Admin Notification"
+#~ msgstr "งานธุรการการแจ้งเตือน"
+
+#~ msgid "Site Administration"
+#~ msgstr "การดูแลไซต์"
+
+#~ msgid "New Contact recieved from Website"
+#~ msgstr "ติดต่อใหม่ได้รับจากเว็บไซต์"
+
+#~ msgid "Client Notification"
+#~ msgstr "ไคลเอ็นต์ การแจ้งเตือน"
+
+#~ msgid "Thanks for visiting our website"
+#~ msgstr "ขอบคุณสำหรับการเยี่ยมชมเว็บไซต์ของเรา"
+
+#~ msgid "Default"
+#~ msgstr "ผิดนัด"
+
+#~ msgid " (Premium Features available in Paid Edition)"
+#~ msgstr "(สิ่งอำนวยความสะดวกพรีเมี่ยมที่มีอยู่ในข้อมูล Editionแล้ว)"
+
+#~ msgid "Premium Pricing Plan ?"
+#~ msgstr "แผนการกำหนดราคาพรีเมี่?"
+
+#~ msgid "Detailed Features"
+#~ msgstr "สิ่งอำนวยความสะดวกที่รายละเอียด"
 
 #~ msgid "Roles & Capabilities"
 #~ msgstr "บทบาทและความสามารถ"

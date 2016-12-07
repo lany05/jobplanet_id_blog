@@ -1,5 +1,5 @@
 <?php
-
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -17,10 +17,10 @@ if (!current_user_can($cb_user_role_permission))
 	return;
 }
 else
-{ 
+{
 	if(isset($_REQUEST["msg"]))
 	{
-		if(esc_attr($_REQUEST["msg"]) == "no") 
+		if(esc_attr($_REQUEST["msg"]) == "no")
 		{
 		 update_option("contact-bank-banner", "no");
 		 ?>
@@ -359,9 +359,9 @@ else
 															</ul>
 														</div>
 													</div>
-												</div> 
-											</div> 
-										</div> 
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -377,9 +377,9 @@ else
 								<div id="uxdownload" class="contact_bank_getting_started">
 									<p>
 										We’re interested in hearing from you.</p>
-		
+
 										<p>We will help you through the process and try to provide the answers.</p>
-										
+
 										<p>If you need to know more about our services or have something to share, please feel free to contact us.
 									</p>
 									<p>We commit to responses within 24 hours on weekdays – generally within hours during week day work hours.</p>
@@ -398,6 +398,6 @@ else
 			</div>
 		</div>
 	</form>
-<?php 
+<?php
 }
 ?>

@@ -1,4 +1,5 @@
 <?php
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -10,7 +11,7 @@ switch($cb_role)
 	case "author":
 		$cb_user_role_permission = "publish_posts";
 		break;
-	
+
 }
 if (!current_user_can($cb_user_role_permission))
 {
@@ -48,6 +49,8 @@ else
 		</div>
 	</form>
 	<script type="text/javascript">
+	if (typeof(contact_bank_autoupdate) != "function")
+	{
 		function contact_bank_autoupdate(control)
 		{
 			var contact_updates = jQuery(control).val();
@@ -55,7 +58,8 @@ else
 			{
 			});
 		}
+	}
 	</script>
-<?php 
+<?php
 }
 ?>

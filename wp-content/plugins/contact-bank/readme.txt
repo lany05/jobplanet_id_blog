@@ -1,9 +1,9 @@
 ﻿=== Contact Bank - Contact Forms Builder ===
 Contributors: contact-banker, Gallery-Bank
-Tags: admin, advanced form, best contact form plugin, contact, contact button, contact form, contact form builder, Contact Form Builder with recaptcha, contact form plugin, contact forms, contact forms plugin, contact manager, contact us, contact us form, contacts form plugin, custom form, feedback, feedback form, feedback forms, form, forms, forms plugin, post feedback, web form, wordpress contact form
+Tags: advanced form, best contact form plugin, contact form builder, contact manager, contact us form, custom form, feedback form, web form, contact us, contact bank, contact form, forms
 Requires at least: 3.1
-Tested up to: 4.4.2
-Stable tag: 2.0.351
+Tested up to: 4.6.1
+Stable tag: 2.1.29
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,7 +45,7 @@ https://www.youtube.com/watch?v=yDYlsMhA3G0
 
 
 = Key Features in Contact Bank Lite Edition =
- 
+
 * Multi-Lingual. Available now in 36 Languages.
 * Responsive Forms
 * Shortcode Wizard in your Page/Post.
@@ -140,26 +140,26 @@ Visit [here](http://tech-banker.com/products/wp-contact-bank/) to upgrade to Pro
 
 == Installation ==
 
-### Performing a new installation  
+### Performing a new installation
 
-After downloading the ZIP file,  
+After downloading the ZIP file,
 
-1. Log in to the administrator panel.  
-2. Go to Plugins Add > New > Upload.  
-3. Click "Choose file" ("Browse") and select the downloaded zip file.  
+1. Log in to the administrator panel.
+2. Go to Plugins Add > New > Upload.
+3. Click "Choose file" ("Browse") and select the downloaded zip file.
 
-*For Mac Users*  
-*Go to your Downloads folder and locate the folder with the plugin. Right-click on the folder and select Compress. Now you have a newly created .zip file which can be installed as described here.*  
+*For Mac Users*
+*Go to your Downloads folder and locate the folder with the plugin. Right-click on the folder and select Compress. Now you have a newly created .zip file which can be installed as described here.*
 
-1. Click "Install Now" button.  
-2. Click "Activate Plugin" button for activating the plugin.  
+1. Click "Install Now" button.
+2. Click "Activate Plugin" button for activating the plugin.
 
 If any problem occurs, please contact us at [support@tech-banker.com](mailto:support@tech-banker.com).
 
 == Other Notes ==
 
-= Minimum requirements for Contact Bank. =  
-*   Wordpress 3.3+  
+= Minimum requirements for Contact Bank. =
+*   Wordpress 3.3+
 *   PHP 5.x
 *   MySQL 5.x
 
@@ -169,7 +169,7 @@ If any problem occurs, please contact us at [support@tech-banker.com](mailto:sup
 
 = How to add New Contact Form in Contact Bank Plugin? =
 
-In order to add New Form in your Contact Bank, you need go to your Contact Bank 
+In order to add New Form in your Contact Bank, you need go to your Contact Bank
 Dashboard Page located on the left side of WordPress Dashboard Menus.
 
 [Click here to view the Image](http://tech-banker.com/wp-content/uploads/2013/11/add_form_1.png)
@@ -262,7 +262,7 @@ appear in the Form Layout Preview.
 [Click here to view the Image](http://tech-banker.com/wp-content/uploads/2013/11/paragragh_control4.png)
 
 
-= How to add Email Address Control in a Form? = 
+= How to add Email Address Control in a Form? =
 
 In order to add Email Address control in a Form, click on the Email Address button.
 
@@ -548,6 +548,151 @@ In order to set Shortcode for a Form, you need to follow these steps :
 
 
 == Changelog ==
+
+= 2.1.29 =
+
+* Success Message Redirect Bug Fixed
+* Code Optimized
+* Few Minor Bugs Fixed
+
+= 2.1.28 =
+
+* Code Optimized
+* Few Bugs Fixed
+
+= 2.1.27 =
+
+* Security Patch
+* Code Optimized
+
+= 2.1.26 =
+
+* Compatiblity with 4.6
+* Code Optimized
+* Few Bugs Fixed
+
+= 2.1.25 =
+
+* Code Optimized
+* Few Bugs Fixed
+
+= 2.1.24 =
+
+* Cross Site Scripting Security Fix
+* Code Optimized
+* Few Bugs Fixed
+
+= 2.1.23 =
+
+* Cross Site Scripting Security Fix
+* Code Optimized
+
+= 2.1.21 =
+
+* Languages Updated
+* Few Bugs Fixed
+* Code Optimized
+
+= 2.1.19 =
+
+* Few Bugs Fixed
+
+= 2.1.18 =
+
+* Other Services Section Updated
+* Code Optimized
+
+= 2.1.17 =
+
+* Few Bugs Fixed
+* Pricing Table Changed
+
+= 2.1.16 =
+
+* Compatibility with 4.5.3
+* Code Optimized
+
+= 2.1.15 =
+
+* Few Bugs Fixed
+
+= 2.1.14 =
+
+* Code Optimized
+
+= 2.1.13 =
+
+* Few Bugs Fixed
+
+= 2.1.12 =
+
+* Code Optimized
+
+= 2.1.11 =
+
+* Few Bugs Fixed
+
+= 2.1.10 =
+
+* Compatibility with 4.5.2
+* Code Optimized
+
+= 2.1.9 =
+
+* Few Bugs Fixed
+
+= 2.1.8 =
+
+* Compatibility with 4.5.1
+* Code Optimized
+
+= 2.1.7 =
+
+* Compatibility with 4.5
+* Few Bugs Fixed
+
+= 2.1.6 =
+
+* Finnish Language Updated
+* Few Bugs Fixed
+
+= 2.1.5 =
+
+* Code Optimized
+
+= 2.1.4 =
+
+* Few Bugs Fixed
+
+= 2.1.3 =
+
+* Few Bugs Fixed
+
+= 2.1.2 =
+
+* Few Bugs Fixed
+
+= 2.1.1 =
+
+* German language Updated.
+* Remove Unwanted CSS files.
+* Optimized Code.
+
+= 2.1.0 =
+
+* Major Version Release
+* Code Optimized
+* Saving of Data Changed
+* Removed Unwanted Javascript Functions
+* Forms are Serialized and Encoded with a Secure Algorithm
+
+= 2.0.353 =
+
+* Few Bugs Fixed
+
+= 2.0.352 =
+
+* Few Formatting Issues Fixed.
 
 = 2.0.351 =
 
@@ -1005,7 +1150,7 @@ In order to set Shortcode for a Form, you need to follow these steps :
 * Few Bugs Fixed
 * Banners Updated
 
-= 2.0.51 = 
+= 2.0.51 =
 
 * Few Possible Security Issues Addressed
 

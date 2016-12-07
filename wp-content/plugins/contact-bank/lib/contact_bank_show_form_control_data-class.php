@@ -1,18 +1,17 @@
 <?php
-	
-	switch($cb_role)
-	{
-		case "administrator":
-			$cb_user_role_permission = "manage_options";
-		break;
-		case "editor":
-			$cb_user_role_permission = "publish_pages";
-		break;
-		case "author":
-			$cb_user_role_permission = "publish_posts";
-		break;
-		
-	}
+if(!defined("ABSPATH")) exit; //exit if accessed directly
+switch($cb_role)
+{
+	case "administrator":
+		$cb_user_role_permission = "manage_options";
+	break;
+	case "editor":
+		$cb_user_role_permission = "publish_pages";
+	break;
+	case "author":
+		$cb_user_role_permission = "publish_posts";
+	break;
+}
 if (!current_user_can($cb_user_role_permission))
 {
 	return;
@@ -21,11 +20,11 @@ else
 {
 	if(isset($_REQUEST["param"]))
 	{
-		if($_REQUEST["param"] == "bind_text_control")
+		if(esc_attr($_REQUEST["param"]) == "bind_text_control")
 		{
-			$form_id = intval($_REQUEST["form_id"]);
-			$field_type = intval($_REQUEST["control_type"]);
-			$dynamicId = intval($_REQUEST["dynamicId"]);
+			$form_id = isset($_REQUEST["form_id"]) ? intval($_REQUEST["form_id"]) : 0;
+			$field_type = isset($_REQUEST["control_type"]) ? intval($_REQUEST["control_type"]) : 0;
+			$dynamicId = isset($_REQUEST["dynamicId"]) ? intval($_REQUEST["dynamicId"]) : 0;
 			$control_id = $wpdb->get_var
 			(
 				$wpdb->prepare
@@ -51,13 +50,13 @@ else
 				$form_settings[$dynamicId]["control_id"] = intval($control_id);
 				for($flag = 0; $flag<count($form_data);$flag++)
 				{
-					if($form_data[$flag]->dynamic_settings_key == "cb_dropdown_option_id" || $form_data[$flag]->dynamic_settings_key == "cb_dropdown_option_val" 
+					if($form_data[$flag]->dynamic_settings_key == "cb_dropdown_option_id" || $form_data[$flag]->dynamic_settings_key == "cb_dropdown_option_val"
 					|| $form_data[$flag]->dynamic_settings_key == "cb_checkbox_option_id" || $form_data[$flag]->dynamic_settings_key == "cb_checkbox_option_val"
 					|| $form_data[$flag]->dynamic_settings_key == "cb_radio_option_id" || $form_data[$flag]->dynamic_settings_key == "cb_radio_option_val")
 						{
 							$form_settings[$dynamicId][$form_data[$flag]->dynamic_settings_key] = unserialize($form_data[$flag]->dynamic_settings_value);
 						}
-						else 
+						else
 						{
 							$form_settings[$dynamicId][$form_data[$flag]->dynamic_settings_key] = $form_data[$flag]->dynamic_settings_value;
 						}
@@ -65,6 +64,6 @@ else
 			}
 			echo json_encode($form_settings);
 			die();
-		}	
+		}
 	}
-}	
+}

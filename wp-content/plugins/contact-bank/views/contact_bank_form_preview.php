@@ -1,5 +1,5 @@
 <?php
-
+if(!defined("ABSPATH")) exit; //exit if accessed directly
 switch($cb_role)
 {
 	case "administrator":
@@ -18,7 +18,7 @@ if (!current_user_can($cb_user_role_permission))
 }
 else
 {
-		$form_id = intval($_REQUEST["form_id"]);
+		$form_id = isset($_REQUEST["form_id"]) ?intval($_REQUEST["form_id"]) : 0;
 		$control_settings_array = array();
 		$form_settings_array = array();
 		$layout_settings_array = array();
@@ -54,7 +54,7 @@ else
 				$control_settings_array[$column_dynamicId][$control_settings[$flag1]->dynamic_settings_key] = $control_settings[$flag1]->dynamic_settings_value;
 			}
 		}
-		
+
 		$form_settings = $wpdb->get_results
 		(
 			$wpdb->prepare
@@ -67,7 +67,7 @@ else
 		{
 			$form_settings_array[$form_id][$form_settings[$flag2]->form_message_key] = $form_settings[$flag2]->form_message_value;
 		}
-		
+
 		$forms_layout_settings = $wpdb->get_results
 		(
 			$wpdb->prepare
@@ -80,7 +80,7 @@ else
 		{
 			$layout_settings_array[$form_id][$forms_layout_settings[$flag3]->form_settings_key] = $forms_layout_settings[$flag3]->form_settings_value;
 		}
-		
+
 		$forms_email_settings = $wpdb->get_row
 		(
 			$wpdb->prepare
@@ -91,7 +91,7 @@ else
 		);
 		?>
 		<style type="text/css">
-		
+
 		    .main_container_form
 		    {
 		        display: inline-block !important;
@@ -133,7 +133,7 @@ else
 						text-align: right !important;
 						<?php
 					}
-					else 
+					else
 					{
 						?>
 		            	text-align: <?php echo $layout_settings_array[$form_id]["label_setting_font_align_left"] == "0" ? "left" : "right"; ?> !important;
@@ -141,13 +141,13 @@ else
 					}
 		        ?>
 		        font-size: <?php echo $layout_settings_array[$form_id]["label_setting_font_size"] . "px"; ?> !important;
-		        
+
 		        display: <?php echo $layout_settings_array[$form_id]["label_setting_hide_label"] == "0" ? "inline-block" : "none"; ?> !important;
 		        direction: <?php echo $layout_settings_array[$form_id]["label_setting_text_direction"]; ?> !important;
 		    }
 		    .input_control
 			{
-				
+
 				font-family: <?php echo $layout_settings_array[$form_id]["input_field_font_family"]; ?> !important;
 				color: <?php echo $layout_settings_array[$form_id]["input_field_font_color"]; ?> !important;
 				<?php
@@ -184,7 +184,7 @@ else
 		        	margin-left: 0px !important;
 		        	<?php
 				}
-				
+
 				?>
 			}
 			.field_description
@@ -207,7 +207,7 @@ else
 					}
 				?>
 				font-size: <?php echo $layout_settings_array[$form_id]["label_setting_field_size"] . "px"; ?> !important;
-				text-align: <?php echo $layout_settings_array[$form_id]["label_setting_field_align"]; ?> !important; 
+				text-align: <?php echo $layout_settings_array[$form_id]["label_setting_field_align"]; ?> !important;
 			}
 			.btn_submit
 			{
@@ -245,7 +245,7 @@ else
 			}
 			.success_message
 			{
-				
+
 				background-color: <?php echo $layout_settings_array[$form_id]["success_msg_bg_color"]; ?> !important;
 				border: <?php echo "2px Solid ".$layout_settings_array[$form_id]["success_msg_border_color"]; ?>  !important;
 				color: <?php echo $layout_settings_array[$form_id]["success_msg_text_color"]; ?> !important;
@@ -330,7 +330,7 @@ else
 											                             <?php
 													                   switch($form_fields[$flag]->field_id)
 													                    {
-													                        
+
 																				case 1:
 													                            ?>
 													                             <div class="layout-controls layout_according_label_position">
@@ -344,7 +344,7 @@ else
 														                                   data-digit="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_checkbox_digit_filter"];?>"
 														                                   data-strip="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_checkbox_strip_tag_filter"];?>"
 														                                   data-trim="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_checkbox_trim_filter"];?>"
-														                                   
+
 														                                   onfocus="prevent_paste(this.id);"/>
 														                                   <br/>
 														                                   <span class="field_description" id="txt_description_"><?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_description"]; ?></span>
@@ -356,13 +356,13 @@ else
 																				<div class="layout-controls layout_according_label_position">
 													                            <textarea class="hovertip input_control <?php echo $layout_settings_array[$form_id]["input_field_input_size"]; ?>" id="ux_textarea_control_<?php echo $form_fields[$flag]->column_dynamicId; ?>"
 													                                      placeholder="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_default_txt_val"];?>" name="ux_textarea_control_<?php echo $form_fields[$flag]->column_dynamicId; ?>"
-													                                      onfocus="prevent_paste(this.id);" 
+													                                      onfocus="prevent_paste(this.id);"
 													                                      data-alpha="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_checkbox_alpha_filter"];?>"
 														                                  data-alpha_num="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_ux_checkbox_alpha_num_filter"];?>"
 														                                  data-digit="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_checkbox_digit_filter"];?>"
 														                                  data-strip="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_checkbox_strip_tag_filter"];?>"
 														                                  data-trim="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_checkbox_trim_filter"];?>"
-														                                  
+
 													                                      data-original-title="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_tooltip_txt"]; ?>"></textarea>
 													                                      <br/>
 														                                  <span class="field_description" id="txt_description_"><?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_description"]; ?></span>
@@ -381,13 +381,13 @@ else
 															                                 <br/>
 														                                   <span class="field_description" id="txt_description_"><?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_description"]; ?></span>
 														                           </div>
-																					<?php				
+																					<?php
 																			break;
 																			case 4:
 																				$ddl_values = unserialize($control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_dropdown_option_val"]);
 									                            				$ddl_ids = unserialize($control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_dropdown_option_id"]);
 																				?>
-																				
+
 													                          	 <div class="layout-controls layout_according_label_position">
 													                             <select class="hovertip input_control <?php echo $layout_settings_array[$form_id]["input_field_input_size"]; ?>" type="select" id="ux_select_default_<?php echo $form_fields[$flag]->column_dynamicId; ?>"
 													                                    data-original-title="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_tooltip_txt"]; ?>"
@@ -416,7 +416,7 @@ else
 																					foreach($chk_ids as $key => $value )
 														                            {
 																						?>
-																							
+
 																                                <input type="checkbox" class="hovertip" id="ux_chk_control_<?php echo $value; ?>"
 																                                data-original-title="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_tooltip_txt"]; ?>"
 																                                       name="<?php echo $form_fields[$flag]->column_dynamicId; ?>_chk[]"
@@ -424,14 +424,14 @@ else
 																                                <label style="margin:0px;vertical-align: middle;" id="chk_id_<?php echo $value; ?>">
 																                                    <?php echo $chk_values[$key]; ?>
 																                                </label>
-																                           
+
 																						<?php
 																					}
 																					?>
 																					</div>
 																					<?php
 																				}
-																				else 
+																				else
 																				{
 																					?>
 																					<div class="layout-controls layout_according_label_position">
@@ -465,7 +465,7 @@ else
 																						else
 																						{
 																							?>
-																							 
+
 																                                <input  type="radio" class="hovertip" id="ux_rdl_control_<?php echo $value; ?>"
 																                                       name="<?php echo $form_fields[$flag]->column_dynamicId; ?>_rdl"
 																                                       data-original-title="<?php echo $control_settings_array[$form_fields[$flag]->column_dynamicId]["cb_tooltip_txt"]; ?>"
@@ -473,8 +473,8 @@ else
 																                                <label style="margin:0px;vertical-align: middle;" id="rdl_id_<?php echo $value; ?>">
 																                                    <?php echo $rdl_values[$key]; ?>
 																                                </label>
-																                              
-																                              
+
+
 																                            <?php
 																						}
 																					}
@@ -482,7 +482,7 @@ else
 																					</div>
 																					<?php
 																				}
-																				else 
+																				else
 																				{
 																					?>
 																					<div class="layout-controls layout_according_label_position">
@@ -490,7 +490,7 @@ else
 																					</div>
 																					<?php
 																				}
-																				
+
 																			break;
 																		}
 													                    ?>
@@ -511,17 +511,19 @@ else
 				</div>
 			</form>
 		</div>
-		
+
 		<script type="text/javascript">
-		function prevent_paste(control_id)
+		if (typeof(base64_encode) != "function")
 		{
-			jQuery("#"+control_id).live("paste",function(e)
+			function prevent_paste(control_id)
 			{
-				e.preventDefault();
-			});
+				jQuery("#"+control_id).live("paste",function(e)
+				{
+					e.preventDefault();
+				});
+			}
 		}
-		
 		</script>
-<?php 
+<?php
 }
 ?>
