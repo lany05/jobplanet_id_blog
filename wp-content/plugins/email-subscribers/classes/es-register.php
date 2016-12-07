@@ -252,12 +252,13 @@ class es_widget_register extends WP_Widget
 				<input class="es_textbox_class" name="es_txt_name" id="es_txt_name" value="" maxlength="225" type="text">
 			</div>
 			<?php } ?>
-			<div class="es_lablebox"><?php _e('Email *', 'email-subscribers'); ?></div>
-			<div class="es_textbox">
-				<input class="es_textbox_class" name="es_txt_email" id="es_txt_email" onkeypress="if(event.keyCode==13) es_submit_page('<?php echo $url; ?>')" value="" maxlength="225" type="text">
-			</div>
-			<div class="es_button">
-				<input class="es_textbox_button" name="es_txt_button" id="es_txt_button" onClick="return es_submit_page('<?php echo $url; ?>')" value="<?php _e('Subscribe', 'email-subscribers'); ?>" type="button">
+			<div>
+				<div class="es_textbox">
+					<input class="es_textbox_class" placeholder="Masukan alamat email" name="es_txt_email"  id="es_txt_email" onkeypress="if(event.keyCode==13) es_submit_page('<?php echo $url; ?>')" value="" maxlength="225" type="text">
+				</div>
+				<div class="es_button">
+					<input class="es_textbox_button" name="es_txt_button" id="es_txt_button" onClick="return es_submit_page('<?php echo $url; ?>')" value="<?php _e('Langganan', 'email-subscribers'); ?>" type="button">
+				</div>
 			</div>
 			<?php if( $es_name != "YES" ) { ?>
 				<input name="es_txt_name" id="es_txt_name" value="" type="hidden">

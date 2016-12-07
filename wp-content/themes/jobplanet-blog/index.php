@@ -43,5 +43,6 @@
             </div>
         </div>
     </div>
+<?php get_sidebar(); ?>
 <?php get_template_part('include/widget'); ?>
 <?php get_footer(); ?>

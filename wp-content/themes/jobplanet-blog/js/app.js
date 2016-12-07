@@ -1,4 +1,14 @@
 jQuery(document).ready(function($) {
+	if (document.getElementById('close_button')){
+		document.getElementById('close_button').onclick = function() {
+			var date = new Date();
+			date.setTime(date.getTime()+(1*24*60*60*1000));
+	        var expires = "; expires="+date.toGMTString();
+
+			document.cookie="pop_state=hidden; expires="+expires;
+	    	document.getElementById('popup-sidebar').style.display = "none";
+    	}
+	}
 
 	var shareBox = {
 		num_share: 0,

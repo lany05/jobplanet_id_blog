@@ -169,4 +169,22 @@ if (!function_exists('mts_footer')) {
         <!--end footer code-->
     <?php }
 }
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+
+    register_sidebar( array(
+        'name'          => 'popup bottom right',
+        'id'            => 'popup_bottom_right',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="rounded">',
+        'after_title'   => '</h2>',
+    ) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
 ?>
